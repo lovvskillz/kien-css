@@ -1,0 +1,55 @@
+// View the color palette online: https://coolors.co/955cff-5b94fc-50f361-50c7f2-f2d750-f25050-e2e2e2-1b1c1e
+$primary-color: #955CFF;
+$secondary-color: #FC765B;
+$success-color: #50F361;
+$info-color: #50C7F2;
+$warning-color: #F2D750;
+$error-color: #F25050;
+$light-color: #EDEEF0;
+$dark-color: #1B1C1E;
+$theme-colors: (
+    "primary":    $primary-color,
+    "secondary":  $secondary-color,
+    "success":    $success-color,
+    "info":       $info-color,
+    "warning":    $warning-color,
+    "error":     $error-color,
+    "light":      $light-color,
+    "dark":       $dark-color
+);
+$background-color: #fff;
+$text-color: calcContrast($background-color);
+
+:root {
+    @each $color-key, $color-value in $theme-colors {
+        --#{$color-key}-color: #{$color-value};
+        @each $shade, $color in makeColorPalette($color-value) {
+            --#{$color-key}-color-step-#{$shade}: #{$color};
+        }
+        --#{$color-key}-color-shade: var(--#{$color-key}-color-step-800);
+        --#{$color-key}-color-dark: #{darken($color-value, 50%)};
+        --#{$color-key}-color-tint: var(--#{$color-key}-color-step-100);
+        --#{$color-key}-color-contrast: #{calcContrast($color-value)};
+    }
+    --background-color: #{$background-color};
+    --text-color: #{$text-color};
+    @each $shade, $color in makeStepColors($text-color, $background-color) {
+        --text-color-step-#{$shade}: #{$color};
+    }
+    --text-color-tint: var(--text-color-step-100);
+    --text-color-contrast: #{calcContrast($text-color)};
+    @each $shade, $color in makeStepColors($background-color, $text-color) {
+        --background-color-step-#{$shade}: #{$color};
+    }
+    --background-color-shade: var(--background-color-step-100);
+    --background-color-contrast: #{calcContrast($background-color)};
+
+    --border-radius:  0.2rem;
+    --transition: 0.2s;
+    --h1-font-size: 2.5rem;
+    --h2-font-size: 2rem;
+    --h3-font-size: 1.8rem;
+    --h4-font-size: 1.6rem;
+    --h5-font-size: 1.4rem;
+    --h6-font-size: 1.2rem;
+}

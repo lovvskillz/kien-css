@@ -1,0 +1,53 @@
+@use "sass:math";
+// Code from https://codepen.io/xdesro/pen/WJBwyv
+@function multiply ($fore, $back) {
+  $red: red($back) * red($fore) / 255;
+  $green: green($back) * green($fore) / 255;
+  $blue: blue($back) * blue($fore) / 255;
+  @return rgb($red, $green, $blue);
+}
+
+@function makeColorPalette($color) {
+  $light: #fff;
+  $dark: multiply($color, $color);
+  $palette: (
+    50: mix($light, $color, 88%),
+    100: mix($light, $color, 70%),
+    200: mix($light, $color, 50%),
+    300: mix($light, $color, 30%),
+    400: mix($light, $color, 15%),
+    500: mix($light, $color, 0%),
+    600: mix($dark, $color, 13%),
+    700: mix($dark, $color, 30%),
+    800: mix($dark, $color, 46%),
+    900: mix($dark, $color, 75%),
+  );
+  @return $palette;
+}
+
+@function makeStepColors($color1, $color2) {
+  $palette: (
+    50: mix($color2, $color1, 5%),
+    100: mix($color2, $color1, 10%),
+    200: mix($color2, $color1, 20%),
+    300: mix($color2, $color1, 30%),
+    400: mix($color2, $color1, 40%),
+    500: mix($color2, $color1, 50%),
+    600: mix($color2, $color1, 60%),
+    700: mix($color2, $color1, 70%),
+    800: mix($color2, $color1, 80%),
+    900: mix($color2, $color1, 90%),
+  );
+  @return $palette;
+}
+
+@function calcContrast($color) {
+  $contrast: math.round((red($color) * 299 + green($color) * 587 + blue($color) * 114) / 1000);
+  @if $contrast > 128 {
+    @return black;
+  }
+  @else {
+    @return white;
+  }
+
+}

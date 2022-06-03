@@ -1,0 +1,8 @@
+@each $color-key, $color-value in $theme-colors {
+    .text-#{$color-key} {
+        color: var(--#{$color-key}-color);
+    }
+    .bg-#{$color-key} {
+        background: var(--#{$color-key}-color);
+    }
+}

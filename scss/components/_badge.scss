@@ -1,0 +1,26 @@
+.badge {
+    --badge-padding-top: 0.3rem;
+    --badge-padding-bottom: var(--alert-padding-top);
+    --badge-padding-left: 0.5rem;
+    --badge-padding-right: var(--alert-padding-left);
+    --badge-border-radius: var(--border-radius);
+    --badge-text-color: var(--text-color);
+    --badge-background-color: var(--background-color-step-50);
+    --badge-margin: 1rem;
+    --badge-font-weight: bold;
+    --badge-font-size: 0.7rem;
+    border-radius: var(--badge-border-radius);
+    padding: var(--badge-padding-top) var(--badge-padding-left);
+    margin-bottom: var(--badge-margin);
+    font-weight: var(--badge-font-weight);
+    background: var(--badge-background-color);
+    color: var(--badge-text-color);
+    font-weight: var(--badge-font-weight);
+    font-size: var(--badge-font-size);
+    @each $color-key, $color-value in $theme-colors {
+        &-#{$color-key} {
+            --badge-background-color: var(--#{$color-key}-color);
+            --badge-text-color: var(--#{$color-key}-color-contrast);
+        }
+    }
+}

@@ -1,0 +1,26 @@
+.alert {
+    --alert-padding-top: 0.75rem;
+    --alert-padding-bottom: var(--alert-padding-top);
+    --alert-padding-left: 1rem;
+    --alert-padding-right: var(--alert-padding-left);
+    --alert-border-radius: var(--border-radius);
+    --alert-text-color: var(--text-color);
+    --alert-background-color: var(--background-color-step-50);
+    --alert-border-left-weight: 0.5rem;
+    --alert-border-left-style: solid;
+    --alert-border-left-color: var(--background-color-step-300);;
+    --alert-border-left: var(--alert-border-left-weight) var(--alert-border-left-style) var(--alert-border-left-color);
+    --alert-margin: 1rem;
+    border-radius: var(--alert-border-radius);
+    padding: var(--alert-padding-top) var(--alert-padding-right) var(--alert-padding-bottom) var(--alert-padding-left);
+    margin-bottom: var(--alert-margin);
+    font-weight: var(--alert-font-weight);
+    background: var(--alert-background-color);
+    color: var(--alert-text-color);
+    border-left: var(--alert-border-left);
+    @each $color-key, $color-value in $theme-colors {
+        &-#{$color-key} {
+            --alert-border-left-color: var(--#{$color-key}-color);
+        }
+    }
+}

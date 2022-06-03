@@ -1,0 +1,18 @@
+a {
+    text-decoration: none;
+}
+
+html{
+    line-height: 1.5;
+    font-family: "PT Sans";
+    font-weight: normal;
+    color: var(--text-color);
+}
+$headings: h1, h2, h3, h4, h5, h6;
+@each $heading in $headings {
+    #{$heading},.#{$heading} {
+        font-size: var(--#{$heading}-font-size);
+        font-weight: 400;
+        line-height: 1.3;
+    }
+}
