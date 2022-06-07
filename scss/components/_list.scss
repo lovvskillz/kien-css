@@ -1,0 +1,68 @@
+.list {
+    --list-padding-top: 0;
+    --list-padding-bottom: var(--list-padding-top);
+    --list-padding-left: var(--list-padding-top);
+    --list-padding-right: var(--list-padding-top);
+    --list-padding: var(--list-padding-top) var(--list-padding-right) var(--list-padding-bottom) var(--list-padding-left);
+    padding: var(--list-padding);
+    list-style-type: none;
+    &-item,&-item-action {
+        --list-item-padding-top: 0.75rem;
+        --list-item-padding-bottom: var(--list-item-padding-top);
+        --list-item-padding-left: 1rem;
+        --list-item-padding-right: var(--list-item-padding-left);
+        --list-item-padding: var(--list-item-padding-top) var(--list-item-padding-right) var(--list-item-padding-bottom) var(--list-item-padding-left);
+        --list-item-border-radius: var(--border-radius);
+        --list-item-text-color: var(--text-color);
+        --list-item-background-color: var(--background-color-step-50);
+        --list-item-border-left-weight: 0rem;
+        --list-item-border-bottom-weight: 0.2rem;
+        --list-item-border-style: solid;
+        --list-item-border-color: var(--background-color-step-300);
+        --list-item-border-left: var(--list-item-border-left-weight) var(--list-item-border-style) var(--list-item-border-color);
+        --list-item-border-bottom: var(--list-item-border-bottom-weight) var(--list-item-border-style) var(--list-item-border-color);
+        --list-item-margin-bottom: 0;
+        --list-item-transition: var(--transition);
+        padding: var(--list-item-padding);
+        margin-bottom: var(--list-item-margin);
+        font-weight: var(--list-item-font-weight);
+        background: var(--list-item-background-color);
+        color: var(--list-item-text-color);
+        border-left: var(--list-item-border-left);
+        border-bottom: var(--list-item-border-bottom);
+        border-top: none;
+        border-right: none;
+        transition: var(--list-item-transition);
+        display: block;
+        position: relative;
+        box-sizing: border-box;
+        &-active {
+            --list-item-background-color: var(--primary-color);
+            --list-item-text-color: var(--primary-color-contrast);
+            --list-item-border-color: var(--primary-color-step-700);
+        }
+        &:first-child {
+            border-top-left-radius: var(--list-item-border-radius);
+            border-top-right-radius: var(--list-item-border-radius);
+        }
+        &:last-child {
+            border-bottom-left-radius: var(--list-item-border-radius);
+            border-bottom-right-radius: var(--list-item-border-radius);
+        }
+    }
+    &-item-action {
+        cursor: pointer;
+        text-align: inherit;
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        text-decoration: none;
+        width: 100%;
+        &:hover {
+            --list-item-border-color: var(--primary-color-step-700);
+            --list-item-background-color: var(--primary-color);
+            --list-item-text-color: var(--primary-color-contrast);
+            --list-item-border-left-weight: 0.5rem;
+        }
+    }
+}
