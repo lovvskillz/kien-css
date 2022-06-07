@@ -1,5 +1,5 @@
 .card {
-    --card-margin-top: 1rem;
+    --card-margin-top: var(--padding-left);
     --card-margin-bottom: var(--card-margin-top);
     --card-margin-left: 0;
     --card-margin-right: var(--card-margin-left);
@@ -26,11 +26,12 @@
         --card-title-margin-top: 0;
         --card-title-margin-bottom: var(--card-padding-top);
         font-size: var(--card-title-font-size);
+        font-weight: normal;
         margin-top: var(--card-title-margin-top);
         margin-bottom: var(--card-title-margin-bottom);
     }
     &-body {
-        --card-body-padding-top: 1rem;
+        --card-body-padding-top: var(--padding-left);
         --card-body-padding-bottom: var(--card-body-padding-top);
         --card-body-padding-left: var(--card-body-padding-top);
         --card-body-padding-right: var(--card-body-padding-top);
@@ -39,7 +40,7 @@
     }
     &-footer {
         --card-footer-padding-top: 0;
-        --card-footer-padding-bottom: 1rem;
+        --card-footer-padding-bottom: var(--padding-left);
         --card-footer-padding-left: var(--card-footer-padding-bottom);
         --card-footer-padding-right: var(--card-footer-padding-bottom);
         --card-footer-padding: var(--card-footer-padding-top) var(--card-footer-padding-right) var(--card-footer-padding-bottom) var(--card-footer-padding-left);

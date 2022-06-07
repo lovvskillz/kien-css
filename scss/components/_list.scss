@@ -7,9 +7,9 @@
     padding: var(--list-padding);
     list-style-type: none;
     &-item,&-item-action {
-        --list-item-padding-top: 0.75rem;
+        --list-item-padding-top: var(--padding-top);
         --list-item-padding-bottom: var(--list-item-padding-top);
-        --list-item-padding-left: 1rem;
+        --list-item-padding-left: var(--padding-left);
         --list-item-padding-right: var(--list-item-padding-left);
         --list-item-padding: var(--list-item-padding-top) var(--list-item-padding-right) var(--list-item-padding-bottom) var(--list-item-padding-left);
         --list-item-border-radius: var(--border-radius);

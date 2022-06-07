@@ -1,7 +1,7 @@
 .alert {
-    --alert-padding-top: 0.75rem;
+    --alert-padding-top: var(--padding-top);
     --alert-padding-bottom: var(--alert-padding-top);
-    --alert-padding-left: 1rem;
+    --alert-padding-left: var(--padding-left);
     --alert-padding-right: var(--alert-padding-left);
     --alert-border-radius: var(--border-radius);
     --alert-text-color: var(--text-color);

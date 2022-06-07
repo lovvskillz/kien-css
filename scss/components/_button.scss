@@ -1,9 +1,9 @@
 .btn,.btn-flat,.btn-outline {
     --button-text-color: var(--text-color);
     --button-font-weight: bold;
-    --button-padding-top: 0.75rem;
+    --button-padding-top: var(--padding-top);
     --button-padding-bottom: var(--button-padding-top);
-    --button-padding-left: 1rem;
+    --button-padding-left: var(--padding-left);
     --button-padding-right: var(--button-padding-left);
     --button-border-radius: var(--border-radius);
     --button-border-width: 0;

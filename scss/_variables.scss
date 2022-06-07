@@ -45,6 +45,8 @@ $text-color: calcContrast($background-color);
     --background-color-contrast: #{calcContrast($background-color)};
 
     --border-radius:  0.2rem;
+    --padding-top: 0.75rem;
+    --padding-left: 1rem;
     --transition: 0.2s;
     --h1-font-size: 2.5rem;
     --h2-font-size: 2rem;
