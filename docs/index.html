@@ -119,6 +119,7 @@
                         <button class="btn-flat btn-flat-dark">Action 2</button>
                     </div>
                 </div>
+            </div>
             <div data-show-code="true">
                 <div class="card card-success">
                     <div class="card-body">
@@ -225,4 +226,15 @@
             </div>
         </section>
     </body>
+    <script>
+        document.querySelectorAll("[data-show-code='true']").forEach(function(elem) {
+            let container = document.createElement("pre");
+            let code = document.createElement("code");
+            let leadingWhiteSpace = elem.innerHTML.toString().search(/\S|$/);
+            code.textContent = elem.innerHTML;
+            code.textContent = code.textContent.split("\n").map(line => line.substring(leadingWhiteSpace-1)).join("\n");
+            container.appendChild(code);
+            elem.after(container);
+        });
+    </script>
 </html>
