@@ -232,7 +232,7 @@
             let code = document.createElement("code");
             let leadingWhiteSpace = elem.innerHTML.toString().search(/\S|$/);
             code.textContent = elem.innerHTML;
-            code.textContent = code.textContent.split("\n").map(line => line.substring(leadingWhiteSpace-1)).join("\n");
+            code.textContent = code.textContent.split("\n").map(line => line.substring(leadingWhiteSpace-1)).filter(line => line).join("\n");
             container.appendChild(code);
             elem.after(container);
         });
