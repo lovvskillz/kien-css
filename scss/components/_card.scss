@@ -21,23 +21,13 @@
             }
         }
     }
-    &-header {
-        --card-header-margin-bottom: calc(var(--card-padding-bottom) / 2);
-        --card-header-padding-top: 1rem;
-        --card-header-padding-bottom: 0;
-        --card-header-padding-left: var(--card-header-padding-top);
-        --card-header-padding-right: var(--card-header-padding-top);
-        --card-header-padding: var(--card-header-padding-top) var(--card-header-padding-right) var(--card-header-padding-bottom) var(--card-header-padding-left);
-        padding: var(--card-header-padding);
-        margin-bottom: var(--card-header-margin-bottom);
-        &-title {
-            --card-header-title-font-size: var(--h3-font-size);
-            --card-header-title-margin-top: 0;
-            --card-header-title-margin-bottom: var(--card-padding-top);
-            font-size: var(--card-header-title-font-size);
-            margin-top: var(--card-header-title-margin-top);
-            margin-bottom: var(--card-header-title-margin-bottom);
-        }
+    &-title {
+        --card-title-font-size: var(--h3-font-size);
+        --card-title-margin-top: 0;
+        --card-title-margin-bottom: var(--card-padding-top);
+        font-size: var(--card-title-font-size);
+        margin-top: var(--card-title-margin-top);
+        margin-bottom: var(--card-title-margin-bottom);
     }
     &-body {
         --card-body-padding-top: 1rem;
