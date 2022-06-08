@@ -27,6 +27,7 @@
         --list-item-border-bottom: var(--list-item-border-bottom-weight) var(--list-item-border-style) var(--list-item-border-color);
         --list-item-margin-bottom: 0;
         --list-item-transition: var(--transition);
+        width: 100%;
         padding: var(--list-item-padding);
         margin-bottom: var(--list-item-margin);
         background: var(--list-item-background-color);
