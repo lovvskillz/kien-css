@@ -7,10 +7,8 @@
     --list-border-weight: 0.1rem;
     --list-border-style: solid;
     --list-border-color: var(--background-color-step-50);
-    --list-border: var(--list-border-weight) var(--list-border-style) var(--list-border-color);
     --list-border-radius: var(--border-radius);
     padding: var(--list-padding);
-    border: var(--list-border);
     border-radius: var(--list-border-radius);
     list-style-type: none;
     &-item,&-item-action {
@@ -21,11 +19,11 @@
         --list-item-padding: var(--list-item-padding-top) var(--list-item-padding-right) var(--list-item-padding-bottom) var(--list-item-padding-left);
         --list-item-text-color: var(--text-color);
         --list-item-background-color: var(--background-color);
-        --list-item-border-bottom-weight: var(--list-border-weight);
+        --list-item-border-weight: var(--list-border-weight);
         --list-item-border-style: var(--list-border-style);
         --list-item-border-color: var(--list-border-color);
-        --list-item-border-bottom: var(--list-item-border-bottom-weight) var(--list-item-border-style) var(--list-item-border-color);
-        --list-item-margin-bottom: 0;
+        --list-item-border: var(--list-item-border-weight) var(--list-item-border-style) var(--list-item-border-color);
+        --list-item-margin: 0;
         --list-item-transition: var(--transition);
         width: 100%;
         padding: var(--list-item-padding);
@@ -36,21 +34,38 @@
         display: block;
         position: relative;
         box-sizing: border-box;
+        border-left: var(--list-item-border);
+        border-right: var(--list-item-border);
+        border-bottom: var(--list-item-border);
+        border-top: none;
+        $list-item-selector: &;
+        @each $selector in $list-item-selector {
+            @each $color-key, $color-value in $theme-colors {
+                &-#{$color-key}#{$selector} {
+                    --list-item-background-color: var(--#{$color-key}-color-step-100);
+                    --list-item-text-color: var(--#{$color-key}-color-step-900);
+                    --list-item-border-color: var(--#{$color-key}-color-step-200);
+                    &#{$selector}-active {
+                        --list-item-background-color: var(--#{$color-key}-color);
+                        --list-item-text-color: var(--#{$color-key}-color-contrast);
+                        --list-item-border-color: var(--#{$color-key}-color-step-600);
+                    }
+                }
+            }
+        }
         &-active {
-            --list-item-background-color: var(--primary-color);
-            --list-item-text-color: var(--primary-color-contrast);
-            --list-item-border-color: var(--primary-color-step-700);
+            --list-item-background-color: var(--background-color-step-100);
+            --list-item-text-color: var(--text-color);
+            --list-item-border-color: var(--background-color-step-200);
         }
         &:first-child {
+            border-top: var(--list-item-border);
             border-top-left-radius: var(--list-border-radius);
             border-top-right-radius: var(--list-border-radius);
         }
         &:last-child {
             border-bottom-left-radius: var(--list-border-radius);
             border-bottom-right-radius: var(--list-border-radius);
-        }
-        &:not(:last-child) {
-            border-bottom: var(--list-item-border-bottom);
         }
     }
     &-item-action {
@@ -59,10 +74,18 @@
         font-family: inherit;
         font-size: inherit;
         line-height: inherit;
-        border: none;
+        $list-item-action-selector: &;
         &:hover {
-            --list-item-background-color: var(--primary-color);
-            --list-item-text-color: var(--primary-color-contrast);
+            --list-item-background-color: var(--background-color-step-200);
+            --list-item-text-color: var(--text-color);
+            --list-item-border-color: var(--background-color-step-300);
+            @each $color-key, $color-value in $theme-colors {
+                &#{$list-item-action-selector}-#{$color-key} {
+                    --list-item-background-color: var(--#{$color-key}-color);
+                    --list-item-text-color: var(--#{$color-key}-color-contrast);
+                    --list-item-border-color: var(--#{$color-key}-color-step-600);
+                }
+            }
         }
     }
 }
