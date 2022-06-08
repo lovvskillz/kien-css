@@ -1,5 +1,6 @@
 .btn,.btn-flat,.btn-outline {
     --button-text-color: var(--text-color);
+    --button-text-color-hover: var(--text-color);
     --button-font-weight: bold;
     --button-padding-top: var(--padding-top);
     --button-padding-bottom: var(--button-padding-top);
@@ -13,7 +14,6 @@
     --button-background-color: var(--background-color-step-50);
     --button-background-color-hover: var(--background-color-shade);
     --button-transition: var(--transition);
-    --button-text-transform: uppercase;
     color: var(--button-text-color);
     font-weight: var(--button-font-weight);
     padding: var(--button-padding-top) var(--button-padding-right) var(--button-padding-bottom) var(--button-padding-left);
@@ -22,12 +22,12 @@
     border-color: var(--button-border-color);
     background: var(--button-background-color);
     transition: var(--button-transition);
-    text-transform: var(--button-text-transform);
     &:hover {
         cursor: pointer;
     }
     &:hover,&:active,&:focus {
         background: var(--button-background-color-hover);
+        color: var(--button-text-color-hover);
     }
 }
 
@@ -37,33 +37,27 @@
             --button-background-color: var(--#{$color-key}-color);
             --button-background-color-hover: var(--#{$color-key}-color-shade);
             --button-text-color: var(--#{$color-key}-color-contrast);
+            --button-text-color-hover: var(--#{$color-key}-color-contrast);
         }
     }
 }
 
 .btn-flat {
     --button-background-color: transparent;
-    --button-background-color-hover: transparent;
-    --button-border-bottom-color: var(--button-border-color);
-    --button-border-bottom-color-hover: var(--background-color-shade);
-    --button-border-bottom-width: 0.3rem;
-    --button-padding-bottom: calc(var(--button-padding-top) - var(--button-border-bottom-width));
-    border-bottom: var(--button-border-bottom-width) var(--button-border-style) var(--button-border-bottom-color);
+    --button-background-color-hover: var(--background-color-step-50);
     @each $color-key, $color-value in $theme-colors {
         &-#{$color-key} {
             --button-text-color: var(--#{$color-key}-color);
-            --button-border-bottom-color-hover: var(--#{$color-key}-color);
+            --button-text-color-hover: var(--#{$color-key}-color-contrast);
+            --button-background-color-hover: var(--#{$color-key}-color);
         }
-    }
-    &:hover {
-        --button-border-bottom-color: var(--button-border-bottom-color-hover);
     }
 }
 
 .btn-group {
     display: flex;
     flex: 1 1 auto;
-    &>.btn {
+    &>.btn,&>.btn-flat {
         border-radius: 0;
         margin-left: 0;
         margin-right: 0;

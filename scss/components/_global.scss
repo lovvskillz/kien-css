@@ -8,3 +8,10 @@ pre {
     padding: var(--padding-top) var(--padding-left);
     border-radius: var(--border-radius);
 }
+
+$shadows: xs, s, m, l, xl;
+@each $shadow in $shadows {
+    .shadow-#{$shadow} {
+        box-shadow: var(--shadow-#{$shadow});
+    }
+}

@@ -4,7 +4,14 @@
     --list-padding-left: var(--list-padding-top);
     --list-padding-right: var(--list-padding-top);
     --list-padding: var(--list-padding-top) var(--list-padding-right) var(--list-padding-bottom) var(--list-padding-left);
+    --list-border-weight: 0.1rem;
+    --list-border-style: solid;
+    --list-border-color: var(--background-color-step-50);
+    --list-border: var(--list-border-weight) var(--list-border-style) var(--list-border-color);
+    --list-border-radius: var(--border-radius);
     padding: var(--list-padding);
+    border: var(--list-border);
+    border-radius: var(--list-border-radius);
     list-style-type: none;
     &-item,&-item-action {
         --list-item-padding-top: var(--padding-top);
@@ -12,26 +19,18 @@
         --list-item-padding-left: var(--padding-left);
         --list-item-padding-right: var(--list-item-padding-left);
         --list-item-padding: var(--list-item-padding-top) var(--list-item-padding-right) var(--list-item-padding-bottom) var(--list-item-padding-left);
-        --list-item-border-radius: var(--border-radius);
         --list-item-text-color: var(--text-color);
-        --list-item-background-color: var(--background-color-step-50);
-        --list-item-border-left-weight: 0rem;
-        --list-item-border-bottom-weight: 0.2rem;
-        --list-item-border-style: solid;
-        --list-item-border-color: var(--background-color-step-300);
-        --list-item-border-left: var(--list-item-border-left-weight) var(--list-item-border-style) var(--list-item-border-color);
+        --list-item-background-color: var(--background-color);
+        --list-item-border-bottom-weight: var(--list-border-weight);
+        --list-item-border-style: var(--list-border-style);
+        --list-item-border-color: var(--list-border-color);
         --list-item-border-bottom: var(--list-item-border-bottom-weight) var(--list-item-border-style) var(--list-item-border-color);
         --list-item-margin-bottom: 0;
         --list-item-transition: var(--transition);
         padding: var(--list-item-padding);
         margin-bottom: var(--list-item-margin);
-        font-weight: var(--list-item-font-weight);
         background: var(--list-item-background-color);
         color: var(--list-item-text-color);
-        border-left: var(--list-item-border-left);
-        border-bottom: var(--list-item-border-bottom);
-        border-top: none;
-        border-right: none;
         transition: var(--list-item-transition);
         display: block;
         position: relative;
@@ -42,12 +41,15 @@
             --list-item-border-color: var(--primary-color-step-700);
         }
         &:first-child {
-            border-top-left-radius: var(--list-item-border-radius);
-            border-top-right-radius: var(--list-item-border-radius);
+            border-top-left-radius: var(--list-border-radius);
+            border-top-right-radius: var(--list-border-radius);
         }
         &:last-child {
-            border-bottom-left-radius: var(--list-item-border-radius);
-            border-bottom-right-radius: var(--list-item-border-radius);
+            border-bottom-left-radius: var(--list-border-radius);
+            border-bottom-right-radius: var(--list-border-radius);
+        }
+        &:not(:last-child) {
+            border-bottom: var(--list-item-border-bottom);
         }
     }
     &-item-action {
@@ -56,12 +58,10 @@
         font-family: inherit;
         font-size: inherit;
         line-height: inherit;
-        width: 100%;
+        border: none;
         &:hover {
-            --list-item-border-color: var(--primary-color-step-700);
             --list-item-background-color: var(--primary-color);
             --list-item-text-color: var(--primary-color-contrast);
-            --list-item-border-left-weight: 0.5rem;
         }
     }
 }
