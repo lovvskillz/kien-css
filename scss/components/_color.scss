@@ -3,6 +3,6 @@
         color: var(--#{$color-key}-color);
     }
     .bg-#{$color-key} {
-        background: var(--#{$color-key}-color);
+        background-color: var(--#{$color-key}-color);
     }
 }

@@ -20,13 +20,13 @@
     border-radius: var(--button-border-radius);
     border: var(--button-border);
     border-color: var(--button-border-color);
-    background: var(--button-background-color);
+    background-color: var(--button-background-color);
     transition: var(--button-transition);
     &:hover {
         cursor: pointer;
     }
     &:hover,&:active,&:focus {
-        background: var(--button-background-color-hover);
+        background-color: var(--button-background-color-hover);
         color: var(--button-text-color-hover);
     }
 }
