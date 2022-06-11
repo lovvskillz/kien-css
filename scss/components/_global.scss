@@ -9,6 +9,10 @@ pre {
     border-radius: var(--border-radius);
 }
 
+code {
+    color: var(--secondary-color);
+}
+
 $shadows: xs, s, m, l, xl;
 @each $shadow in $shadows {
     .shadow-#{$shadow} {
