@@ -7,6 +7,9 @@ pre {
     background-color: var(--background-color-step-50);
     padding: var(--padding-top) var(--padding-left);
     border-radius: var(--border-radius);
+    code {
+        color: var(--text-color);
+    }
 }
 
 code {
