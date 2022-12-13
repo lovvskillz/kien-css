@@ -11,7 +11,7 @@
     padding: var(--list-padding);
     border-radius: var(--list-border-radius);
     list-style-type: none;
-    &-item,&-item-action {
+    &__item {
         --list-item-padding-top: var(--padding-top);
         --list-item-padding-bottom: var(--list-item-padding-top);
         --list-item-padding-left: var(--padding-left);
@@ -41,11 +41,11 @@
         $list-item-selector: &;
         @each $selector in $list-item-selector {
             @each $color-key, $color-value in $theme-colors {
-                &-#{$color-key}#{$selector} {
+                &--#{$color-key}#{$selector} {
                     --list-item-background-color: var(--#{$color-key}-color-step-100);
                     --list-item-text-color: var(--#{$color-key}-color-step-900);
                     --list-item-border-color: var(--#{$color-key}-color-step-200);
-                    &#{$selector}-active {
+                    &#{$selector}--active {
                         --list-item-background-color: var(--#{$color-key}-color);
                         --list-item-text-color: var(--#{$color-key}-color-contrast);
                         --list-item-border-color: var(--#{$color-key}-color-step-600);
@@ -53,7 +53,26 @@
                 }
             }
         }
-        &-active {
+        &--action {
+            cursor: pointer;
+            text-align: inherit;
+            font-family: inherit;
+            font-size: inherit;
+            line-height: inherit;
+            &:hover {
+                --list-item-background-color: var(--background-color-step-200);
+                --list-item-text-color: var(--text-color);
+                --list-item-border-color: var(--background-color-step-300);
+                @each $color-key, $color-value in $theme-colors {
+                    &#{$list-item-selector}--#{$color-key} {
+                        --list-item-background-color: var(--#{$color-key}-color);
+                        --list-item-text-color: var(--#{$color-key}-color-contrast);
+                        --list-item-border-color: var(--#{$color-key}-color-step-600);
+                    }
+                }
+            }
+        }
+        &--active {
             --list-item-background-color: var(--background-color-step-100);
             --list-item-text-color: var(--text-color);
             --list-item-border-color: var(--background-color-step-200);
@@ -66,26 +85,6 @@
         &:last-child {
             border-bottom-left-radius: var(--list-border-radius);
             border-bottom-right-radius: var(--list-border-radius);
-        }
-    }
-    &-item-action {
-        cursor: pointer;
-        text-align: inherit;
-        font-family: inherit;
-        font-size: inherit;
-        line-height: inherit;
-        $list-item-action-selector: &;
-        &:hover {
-            --list-item-background-color: var(--background-color-step-200);
-            --list-item-text-color: var(--text-color);
-            --list-item-border-color: var(--background-color-step-300);
-            @each $color-key, $color-value in $theme-colors {
-                &#{$list-item-action-selector}-#{$color-key} {
-                    --list-item-background-color: var(--#{$color-key}-color);
-                    --list-item-text-color: var(--#{$color-key}-color-contrast);
-                    --list-item-border-color: var(--#{$color-key}-color-step-600);
-                }
-            }
         }
     }
 }

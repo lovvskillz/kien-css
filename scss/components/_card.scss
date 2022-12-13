@@ -13,15 +13,15 @@
     color: var(--card-text-color);
     border-radius: var(--card-border-radius);
     @each $color-key, $color-value in $theme-colors {
-        &-#{$color-key} {
+        &--#{$color-key} {
             --card-background-color: var(--#{$color-key}-color);
             --card-text-color: var(--#{$color-key}-color-contrast);
-            .card-footer {
+            .card__footer {
                 --card-footer-border-top-color: var(--#{$color-key}-color-step-800);
             }
         }
     }
-    &-title {
+    &__title {
         --card-title-font-size: var(--h3-font-size);
         --card-title-margin-top: 0;
         --card-title-margin-bottom: var(--card-padding-top);
@@ -30,7 +30,7 @@
         margin-top: var(--card-title-margin-top);
         margin-bottom: var(--card-title-margin-bottom);
     }
-    &-body {
+    &__body {
         --card-body-padding-top: var(--padding-left);
         --card-body-padding-bottom: var(--card-body-padding-top);
         --card-body-padding-left: var(--card-body-padding-top);
@@ -38,7 +38,7 @@
         --card-body-padding: var(--card-body-padding-top) var(--card-body-padding-right) var(--card-body-padding-bottom) var(--card-body-padding-left);
         padding: var(--card-body-padding);
     }
-    &-footer {
+    &__footer {
         --card-footer-padding-top: calc(var(--padding-left) / 2);
         --card-footer-padding-bottom: var(--card-footer-padding-top);
         --card-footer-padding-left: var(--padding-left);

@@ -1,4 +1,4 @@
-.btn,.btn-flat,.btn-outline {
+.btn,.btn--flat {
     --button-text-color: var(--text-color);
     --button-text-color-hover: var(--text-color);
     --button-font-weight: bold;
@@ -33,31 +33,30 @@
 
 .btn {
     @each $color-key, $color-value in $theme-colors {
-        &-#{$color-key} {
+        &--#{$color-key}:not(&--flat) {
             --button-background-color: var(--#{$color-key}-color);
             --button-background-color-hover: var(--#{$color-key}-color-shade);
             --button-text-color: var(--#{$color-key}-color-contrast);
             --button-text-color-hover: var(--#{$color-key}-color-contrast);
         }
     }
-}
-
-.btn-flat {
-    --button-background-color: transparent;
-    --button-background-color-hover: var(--background-color-step-50);
-    @each $color-key, $color-value in $theme-colors {
-        &-#{$color-key} {
-            --button-text-color: var(--#{$color-key}-color);
-            --button-text-color-hover: var(--#{$color-key}-color-contrast);
-            --button-background-color-hover: var(--#{$color-key}-color);
+    &--flat {
+        --button-background-color: transparent;
+        --button-background-color-hover: var(--background-color-step-50);
+        @each $color-key, $color-value in $theme-colors {
+            &.btn--#{$color-key} {
+                --button-text-color: var(--#{$color-key}-color);
+                --button-text-color-hover: var(--#{$color-key}-color-contrast);
+                --button-background-color-hover: var(--#{$color-key}-color);
+            }
         }
     }
 }
 
-.btn-group {
+.btn_group {
     display: flex;
     flex: 1 1 auto;
-    &>.btn,&>.btn-flat {
+    &>.btn,&>.btn--flat {
         border-radius: 0;
         margin-left: 0;
         margin-right: 0;

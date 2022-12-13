@@ -18,7 +18,7 @@
     font-weight: var(--badge-font-weight);
     font-size: var(--badge-font-size);
     @each $color-key, $color-value in $theme-colors {
-        &-#{$color-key} {
+        &--#{$color-key} {
             --badge-background-color: var(--#{$color-key}-color-step-50);
             --badge-text-color: var(--#{$color-key}-color-step-900);
         }

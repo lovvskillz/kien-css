@@ -21,8 +21,13 @@
     border-left: var(--alert-border-left);
     box-shadow: var(--alert-shadow);
     @each $color-key, $color-value in $theme-colors {
-        &-#{$color-key} {
+        &--#{$color-key} {
             --alert-border-left-color: var(--#{$color-key}-color);
         }
+    }
+    &__title {
+        display: block;
+        font-size: 1.2em;
+        font-weight: 700;
     }
 }

@@ -13,77 +13,104 @@
         <link href="../css/prostoy.css" rel="stylesheet" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     </head>
 
     <body>
         <h1>ProstoyCSS</h1>
         <section>
             <h2>Alerts</h2>
-            <p>Alerts can be used to show an user feedback messages. Add a contextual class like <code>alert-error</code> for proper styling.</p>
+            <p>Alerts can be used to show a user feedback messages. Add a contextual class like <code>alert--error</code> for proper styling.</p>
             <div data-show-code="true">
-                <div class="alert">Normal</div>
-                <div class="alert alert-primary">Primary</div>
-                <div class="alert alert-secondary">Secondary</div>
-                <div class="alert alert-success">Success</div>
-                <div class="alert alert-info">Info</div>
-                <div class="alert alert-warning">Warning</div>
-                <div class="alert alert-error">Error</div>
-                <div class="alert alert-light">Light</div>
-                <div class="alert alert-dark">Dark</div>
+                <div class="alert">
+                    <span class="alert__title">Normal</span>
+                    Alert Text
+                </div>
+                <div class="alert alert--primary">
+                    <span class="alert__title">Primary</span>
+                    Alert Text
+                </div>
+                <div class="alert alert--secondary">
+                    <span class="alert__title">Normal</span>
+                    Alert Text
+                </div>
+                <div class="alert alert--success">
+                    <span class="alert__title">Success</span>
+                    Alert Text
+                </div>
+                <div class="alert alert--info">
+                    <span class="alert__title">Info</span>
+                    Alert Text
+                </div>
+                <div class="alert alert--warning">
+                    <span class="alert__title">Warning</span>
+                    Alert Text
+                </div>
+                <div class="alert alert--error">
+                    <span class="alert__title">Error</span>
+                    Alert Text
+                </div>
+                <div class="alert alert--light">
+                    <span class="alert__title">Light</span>
+                    Alert Text
+                </div>
+                <div class="alert alert--dark">
+                    <span class="alert__title">Dark</span>
+                    Alert Text
+                </div>
             </div>
         </section>
         <section>
             <h2>Badges</h2>
-            <p>Badges can be used to highlight the status of an item, action or as a tag. Add a contextual class like <code>badge-info</code> for proper styling.</p>
+            <p>Badges can be used to highlight the status of an item, action or as a tag. Add a contextual class like <code>badge--info</code> for proper styling.</p>
             <div data-show-code="true">
                 <span class="badge">Normal</span>
-                <span class="badge badge-primary">Primary</span>
-                <span class="badge badge-secondary">Secondary</span>
-                <span class="badge badge-success">Success</span>
-                <span class="badge badge-info">Info</span>
-                <span class="badge badge-warning">Warning</span>
-                <span class="badge badge-error">Error</span>
-                <span class="badge badge-light">Light</span>
-                <span class="badge badge-dark">Dark</span>
+                <span class="badge badge--primary">Primary</span>
+                <span class="badge badge--secondary">Secondary</span>
+                <span class="badge badge--success">Success</span>
+                <span class="badge badge--info">Info</span>
+                <span class="badge badge--warning">Warning</span>
+                <span class="badge badge--error">Error</span>
+                <span class="badge badge--light">Light</span>
+                <span class="badge badge--dark">Dark</span>
             </div>
         </section>
         <section>
             <h2>Buttons</h2>
-            <p>Use buttons to communicate actions to an user. Add a contextual class like <code>btn-primary</code> for proper styling.</p>
+            <p>Use buttons to communicate actions to an user. Add a contextual class like <code>btn--primary</code> for proper styling.</p>
             <div data-show-code="true">
                 <button class="btn">Normal</button>
-                <button class="btn btn-primary">Primary</button>
-                <button class="btn btn-secondary">Secondary</button>
-                <button class="btn btn-success">Success</button>
-                <button class="btn btn-info">Info</button>
-                <button class="btn btn-warning">Warning</button>
-                <button class="btn btn-error">Error</button>
-                <button class="btn btn-light">Light</button>
-                <button class="btn btn-dark">Dark</button>
+                <button class="btn btn--primary">Primary</button>
+                <button class="btn btn--secondary">Secondary</button>
+                <button class="btn btn--success">Success</button>
+                <button class="btn btn--info">Info</button>
+                <button class="btn btn--warning">Warning</button>
+                <button class="btn btn--error">Error</button>
+                <button class="btn btn--light">Light</button>
+                <button class="btn btn--dark">Dark</button>
             </div>
             <h3>Flat</h3>
-            <p>Flat buttons are a good option for the use in cards or if you just want to reduce overlapping colors. Add a contextual class like <code>btn-flat-primary</code> for proper styling.</p>
+            <p>Flat buttons are a good option for the use in cards or if you just want to reduce overlapping colors. Add a contextual class like <code>btn--primary</code> for proper styling.</p>
             <div data-show-code="true">
-                <button class="btn-flat">Normal</button>
-                <button class="btn-flat btn-flat-primary">Primary</button>
-                <button class="btn-flat btn-flat-secondary">Secondary</button>
-                <button class="btn-flat btn-flat-success">Success</button>
-                <button class="btn-flat btn-flat-info">Info</button>
-                <button class="btn-flat btn-flat-warning">Warning</button>
-                <button class="btn-flat btn-flat-error">Error</button>
-                <button class="btn-flat btn-flat-light">Light</button>
-                <button class="btn-flat btn-flat-dark">Dark</button>
+                <button class="btn btn--flat">Normal</button>
+                <button class="btn btn--flat btn--primary">Primary</button>
+                <button class="btn btn--flat btn--secondary">Secondary</button>
+                <button class="btn btn--flat btn--success">Success</button>
+                <button class="btn btn--flat btn--info">Info</button>
+                <button class="btn btn--flat btn--warning">Warning</button>
+                <button class="btn btn--flat btn--error">Error</button>
+                <button class="btn btn--flat btn--light">Light</button>
+                <button class="btn btn--flat btn--dark">Dark</button>
             </div>
         </section>
         <section>
             <h2>Button Group</h2>
             <p>Groups multiple buttons and can be used to present multiple options.</p>
             <div data-show-code="true">
-                <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-success">Success</button>
-                    <button type="button" class="btn btn-warning">Warning</button>
-                    <button type="button" class="btn btn-error">Error</button>
+                <div class="btn_group" role="group">
+                    <button type="button" class="btn btn--success">Success</button>
+                    <button type="button" class="btn btn--warning">Warning</button>
+                    <button type="button" class="btn btn--error">Error</button>
                 </div>
             </div>
         </section>
@@ -92,96 +119,96 @@
             <p>Cards contain content and actions about a single subject.</p>
             <div data-show-code="true">
                 <div class="card">
-                    <div class="card-body">
-                        <p class="card-title">Normal</p>
+                    <div class="card__body">
+                        <p class="card__title">Normal</p>
                         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.
                     </div>
-                    <div class="card-footer">
-                        <button class="btn-flat btn-flat-dark">Action 1</button>
-                        <button class="btn-flat btn-flat-dark">Action 2</button>
+                    <div class="card__footer">
+                        <button class="btn btn--flat btn--dark">Action 1</button>
+                        <button class="btn btn--flat btn--dark">Action 2</button>
                     </div>
                 </div>
             </div>
             <div data-show-code="true">
-                <div class="card card-primary">
-                    <div class="card-body">
-                        <p class="card-title">Primary</p>
+                <div class="card card--primary">
+                    <div class="card__body">
+                        <p class="card__title">Primary</p>
                         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.
                     </div>
-                    <div class="card-footer">
-                        <button class="btn-flat btn-flat-light">Action 1</button>
-                        <button class="btn-flat btn-flat-light">Action 2</button>
+                    <div class="card__footer">
+                        <button class="btn btn--flat btn--light">Action 1</button>
+                        <button class="btn btn--flat btn--light">Action 2</button>
                     </div>
                 </div>
             </div>
-            <div class="card card-secondary">
-                <div class="card-body">
-                    <p class="card-title">Secondary</p>
+            <div class="card card--secondary">
+                <div class="card__body">
+                    <p class="card__title">Secondary</p>
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.
                 </div>
-                <div class="card-footer">
-                    <button class="btn-flat btn-flat-dark">Action 1</button>
-                    <button class="btn-flat btn-flat-dark">Action 2</button>
+                <div class="card__footer">
+                    <button class="btn btn--flat btn--dark">Action 1</button>
+                    <button class="btn btn--flat btn--dark">Action 2</button>
                 </div>
             </div>
-            <div class="card card-success">
-                <div class="card-body">
-                    <p class="card-title">Success</p>
+            <div class="card card--success">
+                <div class="card__body">
+                    <p class="card__title">Success</p>
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.
                 </div>
-                <div class="card-footer">
-                    <button class="btn-flat btn-flat-dark">Action 1</button>
-                    <button class="btn-flat btn-flat-dark">Action 2</button>
+                <div class="card__footer">
+                    <button class="btn btn--flat btn--dark">Action 1</button>
+                    <button class="btn btn--flat btn--dark">Action 2</button>
                 </div>
             </div>
-            <div class="card card-info">
-                <div class="card-body">
-                    <p class="card-title">Info</p>
+            <div class="card card--info">
+                <div class="card__body">
+                    <p class="card__title">Info</p>
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.
                 </div>
-                <div class="card-footer">
-                    <button class="btn-flat btn-flat-dark">Action 1</button>
-                    <button class="btn-flat btn-flat-dark">Action 2</button>
+                <div class="card__footer">
+                    <button class="btn btn--flat btn--dark">Action 1</button>
+                    <button class="btn btn--flat btn--dark">Action 2</button>
                 </div>
             </div>
-            <div class="card card-warning">
-                <div class="card-body">
-                    <p class="card-title">Warning</p>
+            <div class="card card--warning">
+                <div class="card__body">
+                    <p class="card__title">Warning</p>
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.
                 </div>
-                <div class="card-footer">
-                    <button class="btn-flat btn-flat-dark">Action 1</button>
-                    <button class="btn-flat btn-flat-dark">Action 2</button>
+                <div class="card__footer">
+                    <button class="btn btn--flat btn--dark">Action 1</button>
+                    <button class="btn btn--flat btn--dark">Action 2</button>
                 </div>
             </div>
-            <div class="card card-error">
-                <div class="card-body">
-                    <p class="card-title">Error</p>
+            <div class="card card--error">
+                <div class="card__body">
+                    <p class="card__title">Error</p>
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.
                 </div>
-                <div class="card-footer">
-                    <button class="btn-flat btn-flat-light">Action 1</button>
-                    <button class="btn-flat btn-flat-light">Action 2</button>
+                <div class="card__footer">
+                    <button class="btn btn--flat btn--light">Action 1</button>
+                    <button class="btn btn--flat btn--light">Action 2</button>
                 </div>
             </div>
-            <div class="card card-light">
-                <div class="card-body">
-                    <p class="card-title">Light</p>
+            <div class="card card--light">
+                <div class="card__body">
+                    <p class="card__title">Light</p>
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.
                 </div>
-                <div class="card-footer">
-                    <button class="btn-flat btn-flat-dark">Action 1</button>
-                    <button class="btn-flat btn-flat-dark">Action 2</button>
+                <div class="card__footer">
+                    <button class="btn btn--flat btn--dark">Action 1</button>
+                    <button class="btn btn--flat btn--dark">Action 2</button>
                 </div>
             </div>
-            <div class="card card-dark">
-                <div class="card-body">
-                    <p class="card-title">Dark</p>
+            <div class="card card--dark">
+                <div class="card__body">
+                    <p class="card__title">Dark</p>
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.
                 </div>
-                <div class="card-footer">
-                    <button class="btn-flat btn-flat-light">Action 1</button>
-                    <button class="btn-flat btn-flat-light">Action 2</button>
+                <div class="card__footer">
+                    <button class="btn btn--flat btn--light">Action 1</button>
+                    <button class="btn btn--flat btn--light">Action 2</button>
                 </div>
             </div>
         </section>
@@ -190,23 +217,52 @@
             <p>Lists are used to display a collection of content and can be mixed with actions.</p>
             <div data-show-code="true">
                 <ul class="list">
-                    <li class="list-item list-item-active">Item 1</li>
-                    <li class="list-item">Item 2</li>
-                    <li class="list-item">Item 3</li>
-                    <li class="list-item">Item 4</li>
-                    <li class="list-item">Item 5</li>
-                    <li class="list-item list-item-primary">Primary</li>
-                    <li class="list-item list-item-error">Error</li>
+                    <li class="list__item list__item--active">Item 1</li>
+                    <li class="list__item">Item 2</li>
+                    <li class="list__item">Item 3</li>
+                    <li class="list__item">Item 4</li>
+                    <li class="list__item">Item 5</li>
+                    <li class="list__item list__item--primary">Primary</li>
+                    <li class="list__item list__item--error">Error</li>
                 </ul>
             </div>
             <h3>Links and Buttons</h3>
             <div data-show-code="true">
                 <div class="list">
-                    <a class="list-item-action">Action 1</a>
-                    <button class="list-item-action">Action 2</button>
-                    <button class="list-item-action list-item-action-primary">Primary</button>
-                    <button class="list-item-action list-item-action-error">Error</button>
+                    <a class="list__item list__item--action">Action 1</a>
+                    <button class="list__item list__item--action">Action 2</button>
+                    <button class="list__item list__item--action list__item--primary">Primary</button>
+                    <button class="list__item list__item--action list__item--error">Error</button>
                 </div>
+            </div>
+        </section>
+        <section>
+            <h2>Navbar</h2>
+            <div data-show-code="true">
+                <nav class="navbar">
+                    <img src="static/logo.png" height="64px" alt="Logo" class="navbar__logo">
+                    <ul class="navbar__item">
+                        <li>
+                            <a class="navbar__link" href="#">Link 1</a>
+                        </li>
+                        <li>
+                            <a class="navbar__link" href="#">Link 2</a>
+                        </li>
+                        <li>
+                            <a class="navbar__link" href="#">Link 3</a>
+                        </li>
+                        <li>
+                            <a class="navbar__link" href="#">Link 4</a>
+                        </li>
+                        <li>
+                            <a class="navbar__link" href="#">Link 5</a>
+                        </li>
+                        <li>
+                            <a class="navbar__link" href="#">Link 6</a>
+                        </li>
+                    </ul>
+                    <button class="btn btn--primary navbar__item">Button</button>
+                </nav>
             </div>
         </section>
         <section>
@@ -254,14 +310,14 @@
         <section>
             <h2>Text Colors</h2>
             <div data-show-code="true">
-                <span class="text-primary">Primary</span>
-                <span class="text-secondary">Secondary</span>
-                <span class="text-success">Success</span>
-                <span class="text-info">Info</span>
-                <span class="text-warning">Warning</span>
-                <span class="text-error">Error</span>
-                <span class="text-light">Light</span>
-                <span class="text-dark">Dark</span>
+                <span class="text--primary">Primary</span>
+                <span class="text--secondary">Secondary</span>
+                <span class="text--success">Success</span>
+                <span class="text--info">Info</span>
+                <span class="text--warning">Warning</span>
+                <span class="text--error">Error</span>
+                <span class="text--light">Light</span>
+                <span class="text--dark">Dark</span>
             </div>
         </section>
     </body>

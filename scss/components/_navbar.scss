@@ -1,0 +1,42 @@
+.navbar {
+    --navbar-padding-top: 0;
+    --navbar-padding-bottom: var(--navbar-padding-top);
+    --navbar-padding-left: var(--padding-left);
+    --navbar-padding-right: var(--navbar-padding-left);
+    --navbar-padding: var(--navbar-padding-top) var(--navbar-padding-right) var(--navbar-padding-bottom) var(--navbar-padding-left);
+    --navbar-text-color: var(--text-color);
+    --navbar-background-color: var(--background-color-step-50);
+    --navbar-margin: 1rem;
+    --navbar-transition: var(--transition);
+    padding: var(--navbar-padding);
+    margin-bottom: var(--navbar-margin);
+    font-weight: var(--navbar-font-weight);
+    background-color: var(--navbar-background-color);
+    color: var(--navbar-text-color);
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    &__logo {
+        align-self: center;
+    }
+    &__item {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        margin: 0;
+    }
+    &__link {
+        --navbar-link-padding: var(--padding-top);
+        --navbar-link-text-color: var(--background-color-step-700);
+        --navbar-link-color-hover: var(--text-color);
+        display: block;
+        font-weight: bold;
+        padding: var(--navbar-link-padding);
+        color: var(--navbar-link-text-color);
+        transition: var(--navbar-transition);
+        &:hover {
+            color: var(--navbar-link-color-hover);
+        }
+    }
+}
