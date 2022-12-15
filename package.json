@@ -13,15 +13,19 @@
     "sass": "^1.56.2"
   },
   "scripts": {
-    "build-task:scss-compile": "sass src/scss:src/css --style=compressed --no-source-map --quiet",
-    "scss:build": "npm-run-all -p build-task:*",
+    "build-task:scss-compile:prod": "sass src/scss:dist/css --style=compressed --no-source-map --quiet",
+    "scss:prod": "npm-run-all -p build-task:scss-compile:prod",
+    "prod": "npm-run-all -p scss:prod",
+
+    "build-task:scss-compile": "sass src/scss:src/css",
+    "scss:build": "npm-run-all -p build-task:scss-compile",
     "scss:watch": "nodemon -e scss --watch src/scss --exec npm run scss:build",
-    "dev": "npm-run-all -p scss:*",
+    "dev": "npm-run-all -p scss:watch",
     "docs": "http-server -c-1 -o docs"
   },
   "repository": {
     "type": "git",
-    "url": "l"
+    "url": "https://github.com/lovvskillz/prostoy-css"
   },
   "author": "Vadim Zifra",
   "license": "MIT License"
