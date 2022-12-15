@@ -1,9 +1,9 @@
 @use "sass:math";
 // Code from https://codepen.io/xdesro/pen/WJBwyv
 @function multiply ($fore, $back) {
-  $red: red($back) * red($fore) / 255;
-  $green: green($back) * green($fore) / 255;
-  $blue: blue($back) * blue($fore) / 255;
+  $red: calc(red($back) * red($fore) / 255);
+  $green: calc(green($back) * green($fore) / 255);
+  $blue: calc(blue($back) * blue($fore) / 255);
   @return rgb($red, $green, $blue);
 }
 
@@ -42,7 +42,7 @@
 }
 
 @function calcContrast($color) {
-  $contrast: math.round((red($color) * 299 + green($color) * 587 + blue($color) * 114) / 1000);
+  $contrast: math.round(calc((red($color) * 299 + green($color) * 587 + blue($color) * 114) / 1000));
   @if $contrast > 128 {
     @return black;
   }
