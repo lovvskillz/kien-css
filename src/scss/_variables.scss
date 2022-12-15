@@ -20,6 +20,19 @@ $theme-colors: (
 $background-color: #fff;
 $text-color: calcContrast($background-color);
 
+$small-screen: 600px;
+$medium-screen: 768px;
+$large-screen: 992px;
+$xlarge-screen: 1200px;
+$small-and-down: "only screen and (max-width: #{$small-screen})";
+$small-and-up: "only screen and (min-width: #{$small-screen})";
+$medium-and-down: "only screen and (max-width: #{$medium-screen})";
+$medium-and-up: "only screen and (min-width: #{$medium-screen})";
+$large-and-down: "only screen and (max-width: #{$large-screen})";
+$large-and-up: "only screen and (min-width: #{$large-screen})";
+$xlarge-and-down: "only screen and (max-width: #{$xlarge-screen})";
+$xlarge-and-up: "only screen and (min-width: #{$xlarge-screen})";
+
 :root {
     @each $color-key, $color-value in $theme-colors {
         --#{$color-key}-color: #{$color-value};
@@ -43,16 +56,19 @@ $text-color: calcContrast($background-color);
     }
     --background-color-shade: var(--background-color-step-100);
     --background-color-contrast: #{calcContrast($background-color)};
+
     --border-radius:  0.4rem;
     --padding-top: 0.75rem;
     --padding-left: 1rem;
     --transition: 0.2s;
+
     --h1-font-size: 2.5rem;
     --h2-font-size: 2rem;
     --h3-font-size: 1.8rem;
     --h4-font-size: 1.6rem;
     --h5-font-size: 1.4rem;
     --h6-font-size: 1.2rem;
+
     --shadow-xs: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     --shadow-s: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     --shadow-m: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);

@@ -18,7 +18,7 @@
 
     <body>
         <h1>ProstoyCSS</h1>
-        <section>
+        <section class="container">
             <h2>Alerts</h2>
             <p>Alerts can be used to show a user feedback messages. Add a contextual class like <code>alert--error</code> for proper styling.</p>
             <div data-show-code="true">
@@ -60,7 +60,7 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section class="container">
             <h2>Badges</h2>
             <p>Badges can be used to highlight the status of an item, action or as a tag. Add a contextual class like <code>badge--info</code> for proper styling.</p>
             <div data-show-code="true">
@@ -75,7 +75,7 @@
                 <span class="badge badge--dark">Dark</span>
             </div>
         </section>
-        <section>
+        <section class="container">
             <h2>Buttons</h2>
             <p>Use buttons to communicate actions to an user. Add a contextual class like <code>btn--primary</code> for proper styling.</p>
             <div data-show-code="true">
@@ -103,7 +103,7 @@
                 <button class="btn btn--flat btn--dark">Dark</button>
             </div>
         </section>
-        <section>
+        <section class="container">
             <h2>Button Group</h2>
             <p>Groups multiple buttons and can be used to present multiple options.</p>
             <div data-show-code="true">
@@ -114,7 +114,7 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section class="container">
             <h2>Cards</h2>
             <p>Cards contain content and actions about a single subject.</p>
             <div data-show-code="true">
@@ -212,7 +212,32 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section class="container">
+            <h2>Grid</h2>
+            <p>
+                A grid helps you layout your page in a 12 column system.
+                The grid is defined by rows and columns.
+                To add responsiveness to the layout you can use screen size specific column widths.
+                This can be done by adding the screen size: <code>row__col--{size}--{xs,s,m,l,xl}</code>
+                Change the width of your browser to see the difference.
+            </p>
+            <div data-show-code="true">
+                <div class="row">
+                    <div class="row__col row__col--2 card card--primary">row__col--2</div>
+                    <div class="row__col row__col--3 card card--secondary">row__col--3</div>
+                    <div class="row__col row__col--5 card card--success">row__col--5</div>
+                    <div class="row__col row__col--2 card card--dark">row__col--2</div>
+                </div>
+                <div class="row">
+                    <div class="row__col row__col--6--xs row__col--4--s row__col--2--l card card--warning">6--xs 4--s 2--l</div>
+                    <div class="row__col row__col--6--xs row__col--4--s row__col--2--l card card--secondary">6--xs 4--s 2--l</div>
+                    <div class="row__col row__col--4--xs row__col--4--s row__col--2--l card card--light">4--xs 4--s 2--l</div>
+                    <div class="row__col row__col--4--xs row__col--6--s row__col--6--l card card--success">4--xs 6--s 6--l</div>
+                    <div class="row__col row__col--4--xs row__col--6--s row__col--12--l card card--error">4--xs 6--s 12--l</div>
+                </div>
+            </div>
+        </section>
+        <section class="container">
             <h2>Lists</h2>
             <p>Lists are used to display a collection of content and can be mixed with actions.</p>
             <div data-show-code="true">
@@ -236,7 +261,7 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section class="container">
             <h2>Navbar</h2>
             <div data-show-code="true">
                 <nav class="navbar">
@@ -265,7 +290,7 @@
                 </nav>
             </div>
         </section>
-        <section>
+        <section class="container">
             <h2>Table</h2>
             <p>Tables can be used to organize and display data.</p>
             <div data-show-code="true">
@@ -307,7 +332,7 @@
                 </table>
             </div>
         </section>
-        <section>
+        <section class="container">
             <h2>Text Colors</h2>
             <div data-show-code="true">
                 <span class="text--primary">Primary</span>
