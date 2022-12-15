@@ -7,15 +7,17 @@
     "doc": "docs"
   },
   "devDependencies": {
+    "http-server": "^14.1.1",
     "nodemon": "^2.0.16",
     "npm-run-all": "^4.1.5",
     "sass": "^1.56.2"
   },
   "scripts": {
-    "build-task:scss-compile": "sass scss:css --style=compressed --no-source-map --quiet",
+    "build-task:scss-compile": "sass src/scss:src/css --style=compressed --no-source-map --quiet",
     "scss:build": "npm-run-all -p build-task:*",
-    "scss:watch": "nodemon -e scss --watch scss --exec npm run scss:build",
-    "dev": "npm-run-all -p scss:*"
+    "scss:watch": "nodemon -e scss --watch src/scss --exec npm run scss:build",
+    "dev": "npm-run-all -p scss:*",
+    "docs": "http-server -c-1 -o docs"
   },
   "repository": {
     "type": "git",
