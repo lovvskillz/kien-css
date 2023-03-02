@@ -20,14 +20,20 @@ $theme-colors: (
 $background-color: #fff;
 $text-color: calcContrast($background-color);
 
+$xsmall-screen: 0;
 $small-screen: 600px;
 $medium-screen: 768px;
 $large-screen: 992px;
 $xlarge-screen: 1200px;
+$xsmall-only: "only screen and (max-width: #{$small-screen - 1px})";
+$xsmall-and-up: "only screen and (min-width: #{$xsmall-screen})";
+$small-only: "only screen and (min-width: #{$small-screen}) and (max-width: #{$medium-screen})";
 $small-and-down: "only screen and (max-width: #{$small-screen})";
 $small-and-up: "only screen and (min-width: #{$small-screen})";
+$medium-only: "only screen and (min-width: #{$medium-screen}) and (max-width: #{$large-screen})";
 $medium-and-down: "only screen and (max-width: #{$medium-screen})";
 $medium-and-up: "only screen and (min-width: #{$medium-screen})";
+$large-only: "only screen and (min-width: #{$large-screen}) and (max-width: #{$xlarge-screen})";
 $large-and-down: "only screen and (max-width: #{$large-screen})";
 $large-and-up: "only screen and (min-width: #{$large-screen})";
 $xlarge-and-down: "only screen and (max-width: #{$xlarge-screen})";
