@@ -5,3 +5,31 @@
         }
     }
 }
+
+
+$screen-breakpoints: (
+    "xs": $xsmall-only,
+    "s": $small-only,
+    "m": $medium-only,
+    "l": $large-only,
+    "xl": $xlarge-and-up,
+    "xs-and-up": $xsmall-and-up,
+    "s-and-up": $small-and-up,
+    "m-and-up": $medium-and-up,
+    "l-and-up": $large-and-up,
+    "s-and-down": $small-and-down,
+    "m-and-down": $medium-and-down,
+    "l-and-down": $large-and-down,
+    "xl-and-down": $xlarge-and-down,
+);
+
+.hide {
+    display: none;
+    @each $key, $media in $screen-breakpoints {
+        &--#{$key} {
+            @media #{$media} {
+                display: none;
+            }
+        } 
+    }
+}

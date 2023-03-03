@@ -217,8 +217,8 @@
             <p>
                 A grid helps you layout your page in a 12 column system.
                 The grid is defined by rows and columns.
-                To add responsiveness to the layout you can use screen size specific column widths.
-                This can be done by adding the screen size: <code>row__col--{size}--{xs,s,m,l,xl}</code>
+                To add responsiveness to the layout you can use screen size specific column widths.<br />
+                This can be done by adding the screen size: <code>row__col--{size}--{xs,s,m,l,xl}</code><br />
                 Change the width of your browser to see the difference.
             </p>
             <div data-show-code="true">
@@ -330,6 +330,22 @@
                         </tr>
                     </tbody>
                 </table>
+            </div>
+        </section>
+        <section class="container">
+            <h2>Hide content</h2>
+            <p>Content can be easily hidden based on screen width.</p>
+            <p>
+                There are 4 different ways to hide content.<br />
+                Always hide content: <code>hide</code><br />
+                Hide content on a certain screen width: <code>hide--{xs,s,m,l,xl}</code><br />
+                Hide content on and above a certain screen width: <code>hide--{xs,s,m,l}-and-up</code><br />
+                Hide content on and below a certain screen width: <code>hide--{s,m,l,xl}-and-down</code>
+            </p>
+            <div data-show-code="true">
+                <p class="hide--m-and-up">.hide--m-and-up</p>
+                <p class="hide--l">.hide--l</p>
+                <p class="hide--s-and-down">.hide--s-and-down</p>
             </div>
         </section>
         <section class="container">
