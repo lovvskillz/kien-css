@@ -15,7 +15,6 @@
     border-radius: var(--alert-border-radius);
     padding: var(--alert-padding-top) var(--alert-padding-right) var(--alert-padding-bottom) var(--alert-padding-left);
     margin-bottom: var(--alert-margin);
-    font-weight: var(--alert-font-weight);
     background-color: var(--alert-background-color);
     color: var(--alert-text-color);
     border-left: var(--alert-border-left);
@@ -26,8 +25,10 @@
         }
     }
     &__title {
+        --alert-title-font-size: var(--h6-font-size);
+        --alert-title-font-weight: var(--title-font-weight);
         display: block;
-        font-size: 1.2em;
-        font-weight: 700;
+        font-size: var(--alert-title-font-size);
+        font-weight: var(--alert-title-font-weight);
     }
 }
