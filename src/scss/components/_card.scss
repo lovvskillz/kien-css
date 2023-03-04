@@ -7,7 +7,6 @@
     --card-border-radius: var(--border-radius);
     --card-text-color: var(--text-color);
     --card-background-color: var(--background-color-step-50);
-    --card-title-font-size: var(--h3-font-size);
     margin: var(--card-margin);
     background-color: var(--card-background-color);
     color: var(--card-text-color);
@@ -22,11 +21,12 @@
         }
     }
     &__title {
-        --card-title-font-size: var(--h3-font-size);
+        --card-title-font-weight: var(--title-font-weight);
+        --card-title-font-size: var(--h5-font-size);
         --card-title-margin-top: 0;
         --card-title-margin-bottom: var(--card-padding-top);
         font-size: var(--card-title-font-size);
-        font-weight: normal;
+        font-weight: var(--card-title-font-weight);
         margin-top: var(--card-title-margin-top);
         margin-bottom: var(--card-title-margin-bottom);
     }

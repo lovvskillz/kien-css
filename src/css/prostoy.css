@@ -149,6 +149,7 @@
   --padding-top: 0.75rem;
   --padding-left: 1rem;
   --transition: 0.2s;
+  --title-font-weight: bolder;
   --h1-font-size: 2.5rem;
   --h2-font-size: 2rem;
   --h3-font-size: 1.8rem;
@@ -254,37 +255,37 @@ html {
 
 h1, .h1 {
   font-size: var(--h1-font-size);
-  font-weight: bolder;
+  font-weight: var(--title-font-weight);
   line-height: 1.3;
 }
 
 h2, .h2 {
   font-size: var(--h2-font-size);
-  font-weight: bolder;
+  font-weight: var(--title-font-weight);
   line-height: 1.3;
 }
 
 h3, .h3 {
   font-size: var(--h3-font-size);
-  font-weight: bolder;
+  font-weight: var(--title-font-weight);
   line-height: 1.3;
 }
 
 h4, .h4 {
   font-size: var(--h4-font-size);
-  font-weight: bolder;
+  font-weight: var(--title-font-weight);
   line-height: 1.3;
 }
 
 h5, .h5 {
   font-size: var(--h5-font-size);
-  font-weight: bolder;
+  font-weight: var(--title-font-weight);
   line-height: 1.3;
 }
 
 h6, .h6 {
   font-size: var(--h6-font-size);
-  font-weight: bolder;
+  font-weight: var(--title-font-weight);
   line-height: 1.3;
 }
 
@@ -547,7 +548,6 @@ h6, .h6 {
   --card-border-radius: var(--border-radius);
   --card-text-color: var(--text-color);
   --card-background-color: var(--background-color-step-50);
-  --card-title-font-size: var(--h3-font-size);
   margin: var(--card-margin);
   background-color: var(--card-background-color);
   color: var(--card-text-color);
@@ -610,11 +610,12 @@ h6, .h6 {
   --card-footer-border-top-color: var(--dark-color-step-800);
 }
 .card__title {
-  --card-title-font-size: var(--h3-font-size);
+  --card-title-font-weight: var(--title-font-weight);
+  --card-title-font-size: var(--h5-font-size);
   --card-title-margin-top: 0;
   --card-title-margin-bottom: var(--card-padding-top);
   font-size: var(--card-title-font-size);
-  font-weight: normal;
+  font-weight: var(--card-title-font-weight);
   margin-top: var(--card-title-margin-top);
   margin-bottom: var(--card-title-margin-bottom);
 }
