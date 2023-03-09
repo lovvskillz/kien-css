@@ -149,7 +149,7 @@
   --padding-top: 0.75rem;
   --padding-left: 1rem;
   --transition: 0.2s;
-  --title-font-weight: bolder;
+  --title-font-weight: 700;
   --h1-font-size: 2.5rem;
   --h2-font-size: 2rem;
   --h3-font-size: 1.8rem;
@@ -709,6 +709,7 @@ h6, .h6 {
 body {
   background-color: var(--background-color);
   color: var(--text-color);
+  margin: 0;
 }
 
 pre {
@@ -1326,13 +1327,65 @@ code {
   --navbar-link-text-color: var(--background-color-step-700);
   --navbar-link-color-hover: var(--text-color);
   display: block;
-  font-weight: bold;
+  font-weight: 500;
   padding: var(--navbar-link-padding);
   color: var(--navbar-link-text-color);
   transition: var(--navbar-transition);
 }
 .navbar__link:hover {
   color: var(--navbar-link-color-hover);
+}
+.navbar--sticky {
+  position: sticky;
+  top: 0;
+  z-index: 1000000;
+}
+
+.sidenav-and-main {
+  display: flex;
+}
+
+.sidenav {
+  --sidenav-top: 64px;
+  --sidenav-width: 300px;
+  width: var(--sidenav-width);
+  position: sticky;
+  top: var(--sidenav-top);
+  align-self: flex-start;
+}
+.sidenav__subheader {
+  --sidenav-subheader-font-weight: bold;
+  font-weight: var(--sidenav-subheader-font-weight);
+}
+.sidenav__item {
+  --sidenav-item-color: var(--text-color);
+  --sidenav-item-background-color: var(--background-color);
+  --sidenav-item-border-color: var(--background-color);
+  --sidenav-item-padding-top: var(--padding-top);
+  --sidenav-item-padding-bottom: var(--sidenav-item-padding-top);
+  --sidenav-item-padding-left: var(--padding-left);
+  --sidenav-item-padding-right: var(--sidenav-item-padding-left);
+  --sidenav-item-padding: var(--sidenav-item-padding-top) var(--sidenav-item-padding-right) var(--sidenav-item-padding-bottom) var(--sidenav-item-padding-left);
+  --sidenav-item-font-weight: 500;
+  --sidenav-item-transition: var(--transition);
+  border-left: 5px solid var(--sidenav-item-border-color);
+  background-color: var(--sidenav-item-background-color);
+  color: var(--sidenav-item-color);
+  display: block;
+  list-style-type: none;
+  padding: var(--sidenav-item-padding);
+  font-weight: var(--sidenav-item-font-weight);
+  transition: var(--sidenav-item-transition);
+}
+.sidenav__item:hover {
+  --sidenav-item-color: var(--primary-color);
+  --sidenav-item-border-color: var(--background-color-step-100);
+  --sidenav-item-background-color: var(--background-color-step-100);
+}
+.sidenav__item--active, .sidenav__item--active:hover {
+  --sidenav-item-color: var(--primary-color);
+  --sidenav-item-border-color: var(--primary-color);
+  --sidenav-item-background-color: var(--background-color-step-100);
 }
 
 .table {
