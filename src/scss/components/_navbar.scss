@@ -31,12 +31,17 @@
         --navbar-link-text-color: var(--background-color-step-700);
         --navbar-link-color-hover: var(--text-color);
         display: block;
-        font-weight: bold;
+        font-weight: 500;
         padding: var(--navbar-link-padding);
         color: var(--navbar-link-text-color);
         transition: var(--navbar-transition);
         &:hover {
             color: var(--navbar-link-color-hover);
         }
+    }
+    &--sticky {
+        position: sticky;
+        top: 0;
+        z-index: 1000000;
     }
 }
