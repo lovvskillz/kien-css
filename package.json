@@ -20,8 +20,8 @@
     "build-task:scss-compile": "sass src/scss:src/css",
     "scss:build": "npm-run-all -p build-task:scss-compile",
     "scss:watch": "nodemon -e scss --watch src/scss --exec npm run scss:build",
-    "dev": "npm-run-all -p scss:watch",
-    "docs": "http-server -c-1 -o docs"
+    "docs": "http-server -c-1 -o docs",
+    "dev": "npm-run-all -p scss:watch docs"
   },
   "repository": {
     "type": "git",
