@@ -13,362 +13,423 @@
         <link href="../src/css/prostoy.css" rel="stylesheet" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,400;1,700&display=swap" rel="stylesheet">
     </head>
 
     <body>
+        <nav class="navbar navbar--sticky">
+            <img src="static/logo.png" height="64" alt="Logo" class="navbar__logo">
+        </nav>
         <h1 class="align--center">ProstoyCSS</h1>
-        <section class="container">
-            <h2>Alerts</h2>
-            <p>Alerts can be used to show a user feedback messages. Add a contextual class like <code>alert--error</code> for proper styling.</p>
-            <div data-show-code="true">
-                <div class="alert">
-                    <span class="alert__title">Normal</span>
-                    Alert Text
-                </div>
-                <div class="alert alert--primary">
-                    <span class="alert__title">Primary</span>
-                    Alert Text
-                </div>
-                <div class="alert alert--secondary">
-                    <span class="alert__title">Normal</span>
-                    Alert Text
-                </div>
-                <div class="alert alert--success">
-                    <span class="alert__title">Success</span>
-                    Alert Text
-                </div>
-                <div class="alert alert--info">
-                    <span class="alert__title">Info</span>
-                    Alert Text
-                </div>
-                <div class="alert alert--warning">
-                    <span class="alert__title">Warning</span>
-                    Alert Text
-                </div>
-                <div class="alert alert--error">
-                    <span class="alert__title">Error</span>
-                    Alert Text
-                </div>
-                <div class="alert alert--light">
-                    <span class="alert__title">Light</span>
-                    Alert Text
-                </div>
-                <div class="alert alert--dark">
-                    <span class="alert__title">Dark</span>
-                    Alert Text
-                </div>
+        <div class="sidenav-and-main">
+            <div class="sidenav">
+                <p class="sidenav__subheader">Components</p>
+                <a href="#components_alerts" class="sidenav__item">Alerts</a>
+                <a href="#components_badges" class="sidenav__item">Badges</a>
+                <a href="#components_buttons" class="sidenav__item">Buttons</a>
+                <a href="#components_cards" class="sidenav__item">Cards</a>
+                <a href="#components_grid" class="sidenav__item">Grid</a>
+                <a href="#components_lists" class="sidenav__item">Lists</a>
+                <a href="#components_navbar" class="sidenav__item">Navbar</a>
+                <a href="#components_sidenav" class="sidenav__item">Sidenav</a>
+                <a href="#components_table" class="sidenav__item">Table</a>
+                <p class="sidenav__subheader">Helpers</p>
+                <a href="#helpers_hide" class="sidenav__item">Hide content</a>
+                <a href="#helpers_alignments" class="sidenav__item">Text Alignments</a>
+                <a href="#helpers_colors" class="sidenav__item">Text Colors</a>
             </div>
-        </section>
-        <section class="container">
-            <h2>Badges</h2>
-            <p>Badges can be used to highlight the status of an item, action or as a tag. Add a contextual class like <code>badge--info</code> for proper styling.</p>
-            <div data-show-code="true">
-                <span class="badge">Normal</span>
-                <span class="badge badge--primary">Primary</span>
-                <span class="badge badge--secondary">Secondary</span>
-                <span class="badge badge--success">Success</span>
-                <span class="badge badge--info">Info</span>
-                <span class="badge badge--warning">Warning</span>
-                <span class="badge badge--error">Error</span>
-                <span class="badge badge--light">Light</span>
-                <span class="badge badge--dark">Dark</span>
-            </div>
-        </section>
-        <section class="container">
-            <h2>Buttons</h2>
-            <p>Use buttons to communicate actions to an user. Add a contextual class like <code>btn--primary</code> for proper styling.</p>
-            <div data-show-code="true">
-                <button class="btn">Normal</button>
-                <button class="btn btn--primary">Primary</button>
-                <button class="btn btn--secondary">Secondary</button>
-                <button class="btn btn--success">Success</button>
-                <button class="btn btn--info">Info</button>
-                <button class="btn btn--warning">Warning</button>
-                <button class="btn btn--error">Error</button>
-                <button class="btn btn--light">Light</button>
-                <button class="btn btn--dark">Dark</button>
-            </div>
-            <h3>Flat</h3>
-            <p>Flat buttons are a good option for the use in cards or if you just want to reduce overlapping colors. Add a contextual class like <code>btn--primary</code> for proper styling.</p>
-            <div data-show-code="true">
-                <button class="btn btn--flat">Normal</button>
-                <button class="btn btn--flat btn--primary">Primary</button>
-                <button class="btn btn--flat btn--secondary">Secondary</button>
-                <button class="btn btn--flat btn--success">Success</button>
-                <button class="btn btn--flat btn--info">Info</button>
-                <button class="btn btn--flat btn--warning">Warning</button>
-                <button class="btn btn--flat btn--error">Error</button>
-                <button class="btn btn--flat btn--light">Light</button>
-                <button class="btn btn--flat btn--dark">Dark</button>
-            </div>
-        </section>
-        <section class="container">
-            <h2>Button Group</h2>
-            <p>Groups multiple buttons and can be used to present multiple options.</p>
-            <div data-show-code="true">
-                <div class="btn_group" role="group">
-                    <button type="button" class="btn btn--success">Success</button>
-                    <button type="button" class="btn btn--warning">Warning</button>
-                    <button type="button" class="btn btn--error">Error</button>
-                </div>
-            </div>
-        </section>
-        <section class="container">
-            <h2>Cards</h2>
-            <p>Cards contain content and actions about a single subject.</p>
-            <div data-show-code="true">
-                <div class="card">
-                    <div class="card__body">
-                        <p class="card__title">Normal</p>
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.
+            <main class="main">
+                <section class="container" id="components_alerts">
+                    <h2>Alerts</h2>
+                    <p>Alerts can be used to show a user feedback messages. Add a contextual class like <code>alert--error</code> for proper styling.</p>
+                    <div data-show-code="true">
+                        <div class="alert">
+                            <span class="alert__title">Normal</span>
+                            Alert Text
+                        </div>
+                        <div class="alert alert--primary">
+                            <span class="alert__title">Primary</span>
+                            Alert Text
+                        </div>
+                        <div class="alert alert--secondary">
+                            <span class="alert__title">Normal</span>
+                            Alert Text
+                        </div>
+                        <div class="alert alert--success">
+                            <span class="alert__title">Success</span>
+                            Alert Text
+                        </div>
+                        <div class="alert alert--info">
+                            <span class="alert__title">Info</span>
+                            Alert Text
+                        </div>
+                        <div class="alert alert--warning">
+                            <span class="alert__title">Warning</span>
+                            Alert Text
+                        </div>
+                        <div class="alert alert--error">
+                            <span class="alert__title">Error</span>
+                            Alert Text
+                        </div>
+                        <div class="alert alert--light">
+                            <span class="alert__title">Light</span>
+                            Alert Text
+                        </div>
+                        <div class="alert alert--dark">
+                            <span class="alert__title">Dark</span>
+                            Alert Text
+                        </div>
                     </div>
-                    <div class="card__footer">
-                        <button class="btn btn--flat btn--dark">Action 1</button>
-                        <button class="btn btn--flat btn--dark">Action 2</button>
+                </section>
+                <section class="container" id="components_badges">
+                    <h2>Badges</h2>
+                    <p>Badges can be used to highlight the status of an item, action or as a tag. Add a contextual class like <code>badge--info</code> for proper styling.</p>
+                    <div data-show-code="true">
+                        <span class="badge">Normal</span>
+                        <span class="badge badge--primary">Primary</span>
+                        <span class="badge badge--secondary">Secondary</span>
+                        <span class="badge badge--success">Success</span>
+                        <span class="badge badge--info">Info</span>
+                        <span class="badge badge--warning">Warning</span>
+                        <span class="badge badge--error">Error</span>
+                        <span class="badge badge--light">Light</span>
+                        <span class="badge badge--dark">Dark</span>
                     </div>
-                </div>
-            </div>
-            <div data-show-code="true">
-                <div class="card card--primary">
-                    <div class="card__body">
-                        <p class="card__title">Primary</p>
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.
+                </section>
+                <section class="container" id="components_buttons">
+                    <h2>Buttons</h2>
+                    <p>Use buttons to communicate actions to an user. Add a contextual class like <code>btn--primary</code> for proper styling.</p>
+                    <div data-show-code="true">
+                        <button class="btn">Normal</button>
+                        <button class="btn btn--primary">Primary</button>
+                        <button class="btn btn--secondary">Secondary</button>
+                        <button class="btn btn--success">Success</button>
+                        <button class="btn btn--info">Info</button>
+                        <button class="btn btn--warning">Warning</button>
+                        <button class="btn btn--error">Error</button>
+                        <button class="btn btn--light">Light</button>
+                        <button class="btn btn--dark">Dark</button>
                     </div>
-                    <div class="card__footer">
-                        <button class="btn btn--flat btn--light">Action 1</button>
-                        <button class="btn btn--flat btn--light">Action 2</button>
+                    <h3>Flat</h3>
+                    <p>Flat buttons are a good option for the use in cards or if you just want to reduce overlapping colors. Add a contextual class like <code>btn--primary</code> for proper styling.</p>
+                    <div data-show-code="true">
+                        <button class="btn btn--flat">Normal</button>
+                        <button class="btn btn--flat btn--primary">Primary</button>
+                        <button class="btn btn--flat btn--secondary">Secondary</button>
+                        <button class="btn btn--flat btn--success">Success</button>
+                        <button class="btn btn--flat btn--info">Info</button>
+                        <button class="btn btn--flat btn--warning">Warning</button>
+                        <button class="btn btn--flat btn--error">Error</button>
+                        <button class="btn btn--flat btn--light">Light</button>
+                        <button class="btn btn--flat btn--dark">Dark</button>
                     </div>
-                </div>
-            </div>
-            <div class="card card--secondary">
-                <div class="card__body">
-                    <p class="card__title">Secondary</p>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.
-                </div>
-                <div class="card__footer">
-                    <button class="btn btn--flat btn--dark">Action 1</button>
-                    <button class="btn btn--flat btn--dark">Action 2</button>
-                </div>
-            </div>
-            <div class="card card--success">
-                <div class="card__body">
-                    <p class="card__title">Success</p>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.
-                </div>
-                <div class="card__footer">
-                    <button class="btn btn--flat btn--dark">Action 1</button>
-                    <button class="btn btn--flat btn--dark">Action 2</button>
-                </div>
-            </div>
-            <div class="card card--info">
-                <div class="card__body">
-                    <p class="card__title">Info</p>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.
-                </div>
-                <div class="card__footer">
-                    <button class="btn btn--flat btn--dark">Action 1</button>
-                    <button class="btn btn--flat btn--dark">Action 2</button>
-                </div>
-            </div>
-            <div class="card card--warning">
-                <div class="card__body">
-                    <p class="card__title">Warning</p>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.
-                </div>
-                <div class="card__footer">
-                    <button class="btn btn--flat btn--dark">Action 1</button>
-                    <button class="btn btn--flat btn--dark">Action 2</button>
-                </div>
-            </div>
-            <div class="card card--error">
-                <div class="card__body">
-                    <p class="card__title">Error</p>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.
-                </div>
-                <div class="card__footer">
-                    <button class="btn btn--flat btn--light">Action 1</button>
-                    <button class="btn btn--flat btn--light">Action 2</button>
-                </div>
-            </div>
-            <div class="card card--light">
-                <div class="card__body">
-                    <p class="card__title">Light</p>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.
-                </div>
-                <div class="card__footer">
-                    <button class="btn btn--flat btn--dark">Action 1</button>
-                    <button class="btn btn--flat btn--dark">Action 2</button>
-                </div>
-            </div>
-            <div class="card card--dark">
-                <div class="card__body">
-                    <p class="card__title">Dark</p>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.
-                </div>
-                <div class="card__footer">
-                    <button class="btn btn--flat btn--light">Action 1</button>
-                    <button class="btn btn--flat btn--light">Action 2</button>
-                </div>
-            </div>
-        </section>
-        <section class="container">
-            <h2>Grid</h2>
-            <p>
-                A grid helps you layout your page in a 12 column system.
-                The grid is defined by rows and columns.
-                To add responsiveness to the layout you can use screen size specific column widths.<br />
-                This can be done by adding the screen size: <code>row__col--{size}--{xs,s,m,l,xl}</code><br />
-                Change the width of your browser to see the difference.
-            </p>
-            <div data-show-code="true">
-                <div class="row">
-                    <div class="row__col row__col--2 card card--primary">row__col--2</div>
-                    <div class="row__col row__col--3 card card--secondary">row__col--3</div>
-                    <div class="row__col row__col--5 card card--success">row__col--5</div>
-                    <div class="row__col row__col--2 card card--dark">row__col--2</div>
-                </div>
-                <div class="row">
-                    <div class="row__col row__col--6--xs row__col--4--s row__col--2--l card card--warning">6--xs 4--s 2--l</div>
-                    <div class="row__col row__col--6--xs row__col--4--s row__col--2--l card card--secondary">6--xs 4--s 2--l</div>
-                    <div class="row__col row__col--4--xs row__col--4--s row__col--2--l card card--light">4--xs 4--s 2--l</div>
-                    <div class="row__col row__col--4--xs row__col--6--s row__col--6--l card card--success">4--xs 6--s 6--l</div>
-                    <div class="row__col row__col--4--xs row__col--6--s row__col--12--l card card--error">4--xs 6--s 12--l</div>
-                </div>
-            </div>
-        </section>
-        <section class="container">
-            <h2>Lists</h2>
-            <p>Lists are used to display a collection of content and can be mixed with actions.</p>
-            <div data-show-code="true">
-                <ul class="list">
-                    <li class="list__item list__item--active">Item 1</li>
-                    <li class="list__item">Item 2</li>
-                    <li class="list__item">Item 3</li>
-                    <li class="list__item">Item 4</li>
-                    <li class="list__item">Item 5</li>
-                    <li class="list__item list__item--primary">Primary</li>
-                    <li class="list__item list__item--error">Error</li>
-                </ul>
-            </div>
-            <h3>Links and Buttons</h3>
-            <div data-show-code="true">
-                <div class="list">
-                    <a class="list__item list__item--action">Action 1</a>
-                    <button class="list__item list__item--action">Action 2</button>
-                    <button class="list__item list__item--action list__item--primary">Primary</button>
-                    <button class="list__item list__item--action list__item--error">Error</button>
-                </div>
-            </div>
-        </section>
-        <section class="container">
-            <h2>Navbar</h2>
-            <div data-show-code="true">
-                <nav class="navbar">
-                    <img src="static/logo.png" height="64px" alt="Logo" class="navbar__logo">
-                    <ul class="navbar__item">
-                        <li>
-                            <a class="navbar__link" href="#">Link 1</a>
-                        </li>
-                        <li>
-                            <a class="navbar__link" href="#">Link 2</a>
-                        </li>
-                        <li>
-                            <a class="navbar__link" href="#">Link 3</a>
-                        </li>
-                        <li>
-                            <a class="navbar__link" href="#">Link 4</a>
-                        </li>
-                        <li>
-                            <a class="navbar__link" href="#">Link 5</a>
-                        </li>
-                        <li>
-                            <a class="navbar__link" href="#">Link 6</a>
-                        </li>
-                    </ul>
-                    <button class="btn btn--primary navbar__item">Button</button>
-                </nav>
-            </div>
-        </section>
-        <section class="container">
-            <h2>Table</h2>
-            <p>Tables can be used to organize and display data.</p>
-            <div data-show-code="true">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>First</th>
-                            <th>Second</th>
-                            <th>Third</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Lorem ipsum dolor sit amet</td>
-                            <td>Lorem ipsum dolor sit amet</td>
-                            <td>Lorem ipsum dolor sit amet</td>
-                        </tr>
-                        <tr>
-                            <td>Lorem ipsum dolor sit amet</td>
-                            <td>Lorem ipsum dolor sit amet</td>
-                            <td>Lorem ipsum dolor sit amet</td>
-                        </tr>
-                        <tr>
-                            <td>Lorem ipsum dolor sit amet</td>
-                            <td>Lorem ipsum dolor sit amet</td>
-                            <td>Lorem ipsum dolor sit amet</td>
-                        </tr>
-                        <tr>
-                            <td>Lorem ipsum dolor sit amet</td>
-                            <td>Lorem ipsum dolor sit amet</td>
-                            <td>Lorem ipsum dolor sit amet</td>
-                        </tr>
-                        <tr>
-                            <td>Lorem ipsum dolor sit amet</td>
-                            <td>Lorem ipsum dolor sit amet</td>
-                            <td>Lorem ipsum dolor sit amet</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-        <section class="container">
-            <h2>Hide content</h2>
-            <p>Content can be easily hidden based on screen width.</p>
-            <p>
-                There are 4 different ways to hide content.<br />
-                Always hide content: <code>hide</code><br />
-                Hide content on a certain screen width: <code>hide--{xs,s,m,l,xl}</code><br />
-                Hide content on and above a certain screen width: <code>hide--{xs,s,m,l}-and-up</code><br />
-                Hide content on and below a certain screen width: <code>hide--{s,m,l,xl}-and-down</code>
-            </p>
-            <div data-show-code="true">
-                <p class="hide--m-and-up">.hide--m-and-up</p>
-                <p class="hide--l">.hide--l</p>
-                <p class="hide--s-and-down">.hide--s-and-down</p>
-            </div>
-        </section>
-        <section class="container">
-            <h2>Text Alignments</h2>
-            <div data-show-code="true">
-                <p class="align--left">Left</p>
-                <p class="align--center">Center</p>
-                <p class="align--right">Right</p>
-            </div>
-        </section>
-        <section class="container">
-            <h2>Text Colors</h2>
-            <div data-show-code="true">
-                <span class="text--primary">Primary</span>
-                <span class="text--secondary">Secondary</span>
-                <span class="text--success">Success</span>
-                <span class="text--info">Info</span>
-                <span class="text--warning">Warning</span>
-                <span class="text--error">Error</span>
-                <span class="text--light">Light</span>
-                <span class="text--dark">Dark</span>
-            </div>
-        </section>
+                </section>
+                <section class="container">
+                    <h2>Button Group</h2>
+                    <p>Groups multiple buttons and can be used to present multiple options.</p>
+                    <div data-show-code="true">
+                        <div class="btn_group" role="group">
+                            <button type="button" class="btn btn--success">Success</button>
+                            <button type="button" class="btn btn--warning">Warning</button>
+                            <button type="button" class="btn btn--error">Error</button>
+                        </div>
+                    </div>
+                </section>
+                <section class="container" id="components_cards">
+                    <h2>Cards</h2>
+                    <p>Cards contain content and actions about a single subject.</p>
+                    <div data-show-code="true">
+                        <div class="card">
+                            <div class="card__body">
+                                <p class="card__title">Normal</p>
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.
+                            </div>
+                            <div class="card__footer">
+                                <button class="btn btn--flat btn--dark">Action 1</button>
+                                <button class="btn btn--flat btn--dark">Action 2</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-show-code="true">
+                        <div class="card card--primary">
+                            <div class="card__body">
+                                <p class="card__title">Primary</p>
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.
+                            </div>
+                            <div class="card__footer">
+                                <button class="btn btn--flat btn--light">Action 1</button>
+                                <button class="btn btn--flat btn--light">Action 2</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card--secondary">
+                        <div class="card__body">
+                            <p class="card__title">Secondary</p>
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.
+                        </div>
+                        <div class="card__footer">
+                            <button class="btn btn--flat btn--dark">Action 1</button>
+                            <button class="btn btn--flat btn--dark">Action 2</button>
+                        </div>
+                    </div>
+                    <div class="card card--success">
+                        <div class="card__body">
+                            <p class="card__title">Success</p>
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.
+                        </div>
+                        <div class="card__footer">
+                            <button class="btn btn--flat btn--dark">Action 1</button>
+                            <button class="btn btn--flat btn--dark">Action 2</button>
+                        </div>
+                    </div>
+                    <div class="card card--info">
+                        <div class="card__body">
+                            <p class="card__title">Info</p>
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.
+                        </div>
+                        <div class="card__footer">
+                            <button class="btn btn--flat btn--dark">Action 1</button>
+                            <button class="btn btn--flat btn--dark">Action 2</button>
+                        </div>
+                    </div>
+                    <div class="card card--warning">
+                        <div class="card__body">
+                            <p class="card__title">Warning</p>
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.
+                        </div>
+                        <div class="card__footer">
+                            <button class="btn btn--flat btn--dark">Action 1</button>
+                            <button class="btn btn--flat btn--dark">Action 2</button>
+                        </div>
+                    </div>
+                    <div class="card card--error">
+                        <div class="card__body">
+                            <p class="card__title">Error</p>
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.
+                        </div>
+                        <div class="card__footer">
+                            <button class="btn btn--flat btn--light">Action 1</button>
+                            <button class="btn btn--flat btn--light">Action 2</button>
+                        </div>
+                    </div>
+                    <div class="card card--light">
+                        <div class="card__body">
+                            <p class="card__title">Light</p>
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.
+                        </div>
+                        <div class="card__footer">
+                            <button class="btn btn--flat btn--dark">Action 1</button>
+                            <button class="btn btn--flat btn--dark">Action 2</button>
+                        </div>
+                    </div>
+                    <div class="card card--dark">
+                        <div class="card__body">
+                            <p class="card__title">Dark</p>
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.
+                        </div>
+                        <div class="card__footer">
+                            <button class="btn btn--flat btn--light">Action 1</button>
+                            <button class="btn btn--flat btn--light">Action 2</button>
+                        </div>
+                    </div>
+                </section>
+                <section class="container" id="components_grid">
+                    <h2>Grid</h2>
+                    <p>
+                        A grid helps you layout your page in a 12 column system.
+                        The grid is defined by rows and columns.
+                        To add responsiveness to the layout you can use screen size specific column widths.<br />
+                        This can be done by adding the screen size: <code>row__col--{size}--{xs,s,m,l,xl}</code><br />
+                        Change the width of your browser to see the difference.
+                    </p>
+                    <div data-show-code="true">
+                        <div class="row">
+                            <div class="row__col row__col--2 card card--primary">row__col--2</div>
+                            <div class="row__col row__col--3 card card--secondary">row__col--3</div>
+                            <div class="row__col row__col--5 card card--success">row__col--5</div>
+                            <div class="row__col row__col--2 card card--dark">row__col--2</div>
+                        </div>
+                        <div class="row">
+                            <div class="row__col row__col--6--xs row__col--4--s row__col--2--l card card--warning">6--xs 4--s 2--l</div>
+                            <div class="row__col row__col--6--xs row__col--4--s row__col--2--l card card--secondary">6--xs 4--s 2--l</div>
+                            <div class="row__col row__col--4--xs row__col--4--s row__col--2--l card card--light">4--xs 4--s 2--l</div>
+                            <div class="row__col row__col--4--xs row__col--6--s row__col--6--l card card--success">4--xs 6--s 6--l</div>
+                            <div class="row__col row__col--4--xs row__col--6--s row__col--12--l card card--error">4--xs 6--s 12--l</div>
+                        </div>
+                    </div>
+                </section>
+                <section class="container" id="components_lists">
+                    <h2>Lists</h2>
+                    <p>Lists are used to display a collection of content and can be mixed with actions.</p>
+                    <div data-show-code="true">
+                        <ul class="list">
+                            <li class="list__item list__item--active">Item 1</li>
+                            <li class="list__item">Item 2</li>
+                            <li class="list__item">Item 3</li>
+                            <li class="list__item">Item 4</li>
+                            <li class="list__item">Item 5</li>
+                            <li class="list__item list__item--primary">Primary</li>
+                            <li class="list__item list__item--error">Error</li>
+                        </ul>
+                    </div>
+                    <h3>Links and Buttons</h3>
+                    <div data-show-code="true">
+                        <div class="list">
+                            <a class="list__item list__item--action">Action 1</a>
+                            <button class="list__item list__item--action">Action 2</button>
+                            <button class="list__item list__item--action list__item--primary">Primary</button>
+                            <button class="list__item list__item--action list__item--error">Error</button>
+                        </div>
+                    </div>
+                </section>
+                <section class="container" id="components_navbar">
+                    <h2>Navbar</h2>
+                    <p>
+                        A navbar is a simple component that is placed at the top of the page to link to further content.
+                        Add <code>.navbar--sticky</code> to your navbar to make it sticky.
+                    </p>
+                    <div data-show-code="true">
+                        <nav class="navbar">
+                            <img src="static/logo.png" height="64px" alt="Logo" class="navbar__logo">
+                            <ul class="navbar__item">
+                                <li>
+                                    <a class="navbar__link" href="#">Link 1</a>
+                                </li>
+                                <li>
+                                    <a class="navbar__link" href="#">Link 2</a>
+                                </li>
+                                <li>
+                                    <a class="navbar__link" href="#">Link 3</a>
+                                </li>
+                                <li>
+                                    <a class="navbar__link" href="#">Link 4</a>
+                                </li>
+                                <li>
+                                    <a class="navbar__link" href="#">Link 5</a>
+                                </li>
+                                <li>
+                                    <a class="navbar__link" href="#">Link 6</a>
+                                </li>
+                            </ul>
+                            <button class="btn btn--primary navbar__item">Button</button>
+                        </nav>
+                    </div>
+                </section>
+                <section class="container" id="components_sidenav">
+                    <h2>Sidenav</h2>
+                    <p>
+                        A sidenav is a simple way to include, for example, a table of contents or a quick navigation on the page. 
+                        A live example can be found here directly on the page.
+                        Wrap your <code>.sidenav</code> and <code>.main</code> content into a <code>.sidenav-and-main</code> container.
+                    </p>
+                    <div data-show-code="true" data-remove-source="true">
+                        <div class="sidenav-and-main">
+                            <div class="sidenav">
+                                <p class="sidenav__subheader">Subheader 1</p>
+                                <a href="#link_to_item1" class="sidenav__item">Sidenav Item 1</a>
+                                <a href="#link_to_item2" class="sidenav__item">Sidenav Item 2</a>
+                                <p class="sidenav__subheader">Subheader 2</p>
+                                <a href="#link_to_item3" class="sidenav__item">Sidenav Item 3</a>
+                                <a href="#link_to_item4" class="sidenav__item">Sidenav Item 4</a>
+                            </div>
+                            <main class="main">
+                                <div id="#link_to_item1">
+                                    <p>Sidenav Item 1</p>
+                                </div>
+                                <div id="#link_to_item2">
+                                    <p>Sidenav Item 2</p>
+                                </div>
+                                <div id="#link_to_item3">
+                                    <p>Sidenav Item 3</p>
+                                </div>
+                                <div id="#link_to_item4">
+                                    <p>Sidenav Item 4</p>
+                                </div>
+                            </main>
+                        </div>
+                    </div>
+                </section>
+                <section class="container" id="components_table">
+                    <h2>Table</h2>
+                    <p>Tables can be used to organize and display data.</p>
+                    <div data-show-code="true">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>First</th>
+                                    <th>Second</th>
+                                    <th>Third</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Lorem ipsum dolor sit amet</td>
+                                    <td>Lorem ipsum dolor sit amet</td>
+                                    <td>Lorem ipsum dolor sit amet</td>
+                                </tr>
+                                <tr>
+                                    <td>Lorem ipsum dolor sit amet</td>
+                                    <td>Lorem ipsum dolor sit amet</td>
+                                    <td>Lorem ipsum dolor sit amet</td>
+                                </tr>
+                                <tr>
+                                    <td>Lorem ipsum dolor sit amet</td>
+                                    <td>Lorem ipsum dolor sit amet</td>
+                                    <td>Lorem ipsum dolor sit amet</td>
+                                </tr>
+                                <tr>
+                                    <td>Lorem ipsum dolor sit amet</td>
+                                    <td>Lorem ipsum dolor sit amet</td>
+                                    <td>Lorem ipsum dolor sit amet</td>
+                                </tr>
+                                <tr>
+                                    <td>Lorem ipsum dolor sit amet</td>
+                                    <td>Lorem ipsum dolor sit amet</td>
+                                    <td>Lorem ipsum dolor sit amet</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                <section class="container" id="helpers_hide">
+                    <h2>Hide content</h2>
+                    <p>Content can be easily hidden based on screen width.</p>
+                    <p>
+                        There are 4 different ways to hide content.<br />
+                        Always hide content: <code>hide</code><br />
+                        Hide content on a certain screen width: <code>hide--{xs,s,m,l,xl}</code><br />
+                        Hide content on and above a certain screen width: <code>hide--{xs,s,m,l}-and-up</code><br />
+                        Hide content on and below a certain screen width: <code>hide--{s,m,l,xl}-and-down</code>
+                    </p>
+                    <div data-show-code="true">
+                        <p class="hide--m-and-up">.hide--m-and-up</p>
+                        <p class="hide--l">.hide--l</p>
+                        <p class="hide--s-and-down">.hide--s-and-down</p>
+                    </div>
+                </section>
+                <section class="container" id="helpers_alignments">
+                    <h2>Text Alignments</h2>
+                    <div data-show-code="true">
+                        <p class="align--left">Left</p>
+                        <p class="align--center">Center</p>
+                        <p class="align--right">Right</p>
+                    </div>
+                </section>
+                <section class="container" id="helpers_colors">
+                    <h2>Text Colors</h2>
+                    <div data-show-code="true">
+                        <span class="text--primary">Primary</span>
+                        <span class="text--secondary">Secondary</span>
+                        <span class="text--success">Success</span>
+                        <span class="text--info">Info</span>
+                        <span class="text--warning">Warning</span>
+                        <span class="text--error">Error</span>
+                        <span class="text--light">Light</span>
+                        <span class="text--dark">Dark</span>
+                    </div>
+                </section>
+            </main>
+        </div>
     </body>
     <script>
         document.querySelectorAll("[data-show-code='true']").forEach(function(elem) {
@@ -378,6 +439,9 @@
             code.textContent = elem.innerHTML.toString().split("\n").map(line => line.substring(leadingWhiteSpace-1)).filter(line => line).join("\n");
             container.appendChild(code);
             elem.after(container);
+            if (elem.getAttribute('data-remove-source')) {
+                elem.remove();
+            }
         });
     </script>
 </html>
