@@ -18,6 +18,7 @@
         --sidenav-item-color: var(--text-color);
         --sidenav-item-background-color: var(--background-color);
         --sidenav-item-border-color: var(--background-color);
+        --sidenav-item-border-radius: var(--border-radius);
         --sidenav-item-padding-top: var(--padding-top);
         --sidenav-item-padding-bottom: var(--sidenav-item-padding-top);
         --sidenav-item-padding-left: var(--padding-left);
@@ -27,6 +28,7 @@
         --sidenav-item-transition: var(--transition);
         border-left: 5px solid var(--sidenav-item-border-color);
         background-color: var(--sidenav-item-background-color);
+        border-radius: var(--sidenav-item-border-radius);
         color: var(--sidenav-item-color);
         display: block;
         list-style-type: none;
