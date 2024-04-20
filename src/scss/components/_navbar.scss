@@ -5,40 +5,47 @@
     --navbar-padding-right: var(--navbar-padding-left);
     --navbar-padding: var(--navbar-padding-top) var(--navbar-padding-right) var(--navbar-padding-bottom) var(--navbar-padding-left);
     --navbar-text-color: var(--text-color);
-    --navbar-background-color: var(--background-color-step-50);
+    --navbar-background-color: var(--base-color-bright);
     --navbar-margin: 1rem;
     --navbar-transition: var(--transition);
-    padding: var(--navbar-padding);
-    margin-bottom: var(--navbar-margin);
-    font-weight: var(--navbar-font-weight);
+
+    align-items: center;
     background-color: var(--navbar-background-color);
     color: var(--navbar-text-color);
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
     display: flex;
+    flex-wrap: nowrap;
+    font-weight: var(--navbar-font-weight);
+    justify-content: space-between;
+    margin-bottom: var(--navbar-margin);
+    padding: var(--navbar-padding);
+
     &__logo {
         align-self: center;
     }
+
     &__item {
         display: flex;
         flex-direction: row;
         list-style: none;
         margin: 0;
     }
+
     &__link {
         --navbar-link-padding: var(--padding-top);
-        --navbar-link-text-color: var(--background-color-step-700);
+        --navbar-link-text-color: var(--base-color-step-700);
         --navbar-link-color-hover: var(--text-color);
+
+        color: var(--navbar-link-text-color);
         display: block;
         font-weight: 500;
         padding: var(--navbar-link-padding);
-        color: var(--navbar-link-text-color);
         transition: var(--navbar-transition);
+
         &:hover {
             color: var(--navbar-link-color-hover);
         }
     }
+
     &--sticky {
         position: sticky;
         top: 0;

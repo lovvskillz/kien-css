@@ -25,6 +25,7 @@ $screen-breakpoints: (
 
 .hide {
     display: none;
+
     @each $key, $media in $screen-breakpoints {
         &--#{$key} {
             @media #{$media} {

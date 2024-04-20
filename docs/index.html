@@ -52,7 +52,7 @@
                             Alert Text
                         </div>
                         <div class="alert alert--secondary">
-                            <span class="alert__title">Normal</span>
+                            <span class="alert__title">Secondary</span>
                             Alert Text
                         </div>
                         <div class="alert alert--success">
@@ -71,14 +71,6 @@
                             <span class="alert__title">Error</span>
                             Alert Text
                         </div>
-                        <div class="alert alert--light">
-                            <span class="alert__title">Light</span>
-                            Alert Text
-                        </div>
-                        <div class="alert alert--dark">
-                            <span class="alert__title">Dark</span>
-                            Alert Text
-                        </div>
                     </div>
                 </section>
                 <section class="container" id="components_badges">
@@ -92,8 +84,6 @@
                         <span class="badge badge--info">Info</span>
                         <span class="badge badge--warning">Warning</span>
                         <span class="badge badge--error">Error</span>
-                        <span class="badge badge--light">Light</span>
-                        <span class="badge badge--dark">Dark</span>
                     </div>
                 </section>
                 <section class="container" id="components_buttons">
@@ -107,8 +97,6 @@
                         <button class="btn btn--info">Info</button>
                         <button class="btn btn--warning">Warning</button>
                         <button class="btn btn--error">Error</button>
-                        <button class="btn btn--light">Light</button>
-                        <button class="btn btn--dark">Dark</button>
                     </div>
                     <h3>Flat</h3>
                     <p>Flat buttons are a good option for the use in cards or if you just want to reduce overlapping colors. Add a contextual class like <code>btn--primary</code> for proper styling.</p>
@@ -120,15 +108,13 @@
                         <button class="btn btn--flat btn--info">Info</button>
                         <button class="btn btn--flat btn--warning">Warning</button>
                         <button class="btn btn--flat btn--error">Error</button>
-                        <button class="btn btn--flat btn--light">Light</button>
-                        <button class="btn btn--flat btn--dark">Dark</button>
                     </div>
                 </section>
                 <section class="container">
                     <h2>Button Group</h2>
                     <p>Groups multiple buttons and can be used to present multiple options.</p>
                     <div data-show-code="true">
-                        <div class="btn_group" role="group">
+                        <div class="btn-group" role="group">
                             <button type="button" class="btn btn--success">Success</button>
                             <button type="button" class="btn btn--warning">Warning</button>
                             <button type="button" class="btn btn--error">Error</button>
@@ -145,8 +131,8 @@
                                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.
                             </div>
                             <div class="card__footer">
-                                <button class="btn btn--flat btn--dark">Action 1</button>
-                                <button class="btn btn--flat btn--dark">Action 2</button>
+                                <button class="btn btn--flat">Action 1</button>
+                                <button class="btn btn--flat">Action 2</button>
                             </div>
                         </div>
                     </div>
@@ -157,8 +143,8 @@
                                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.
                             </div>
                             <div class="card__footer">
-                                <button class="btn btn--flat btn--light">Action 1</button>
-                                <button class="btn btn--flat btn--light">Action 2</button>
+                                <button class="btn btn--flat">Action 1</button>
+                                <button class="btn btn--flat">Action 2</button>
                             </div>
                         </div>
                     </div>
@@ -212,26 +198,6 @@
                             <button class="btn btn--flat btn--light">Action 2</button>
                         </div>
                     </div>
-                    <div class="card card--light">
-                        <div class="card__body">
-                            <p class="card__title">Light</p>
-                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.
-                        </div>
-                        <div class="card__footer">
-                            <button class="btn btn--flat btn--dark">Action 1</button>
-                            <button class="btn btn--flat btn--dark">Action 2</button>
-                        </div>
-                    </div>
-                    <div class="card card--dark">
-                        <div class="card__body">
-                            <p class="card__title">Dark</p>
-                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.
-                        </div>
-                        <div class="card__footer">
-                            <button class="btn btn--flat btn--light">Action 1</button>
-                            <button class="btn btn--flat btn--light">Action 2</button>
-                        </div>
-                    </div>
                 </section>
                 <section class="container" id="components_grid">
                     <h2>Grid</h2>
@@ -244,17 +210,17 @@
                     </p>
                     <div data-show-code="true">
                         <div class="row">
-                            <div class="row__col row__col--2 card card--primary">row__col--2</div>
-                            <div class="row__col row__col--3 card card--secondary">row__col--3</div>
-                            <div class="row__col row__col--5 card card--success">row__col--5</div>
-                            <div class="row__col row__col--2 card card--dark">row__col--2</div>
+                            <div class="row__col row__col--2 card card--primary"><div class="card__body">row__col--2</div></div>
+                            <div class="row__col row__col--3 card card--secondary"><div class="card__body">row__col--3</div></div>
+                            <div class="row__col row__col--5 card card--success"><div class="card__body">row__col--5</div></div>
+                            <div class="row__col row__col--2 card"><div class="card__body">row__col--2</div></div>
                         </div>
                         <div class="row">
-                            <div class="row__col row__col--6--xs row__col--4--s row__col--2--l card card--warning">6--xs 4--s 2--l</div>
-                            <div class="row__col row__col--6--xs row__col--4--s row__col--2--l card card--secondary">6--xs 4--s 2--l</div>
-                            <div class="row__col row__col--4--xs row__col--4--s row__col--2--l card card--light">4--xs 4--s 2--l</div>
-                            <div class="row__col row__col--4--xs row__col--6--s row__col--6--l card card--success">4--xs 6--s 6--l</div>
-                            <div class="row__col row__col--4--xs row__col--6--s row__col--12--l card card--error">4--xs 6--s 12--l</div>
+                            <div class="row__col row__col--6--xs row__col--4--s row__col--2--l card card--warning"><div class="card__body">6--xs 4--s 2--l</div></div>
+                            <div class="row__col row__col--6--xs row__col--4--s row__col--2--l card card--secondary"><div class="card__body">6--xs 4--s 2--l</div></div>
+                            <div class="row__col row__col--4--xs row__col--4--s row__col--2--l card card--light"><div class="card__body">4--xs 4--s 2--l</div></div>
+                            <div class="row__col row__col--4--xs row__col--6--s row__col--6--l card card--success"><div class="card__body">4--xs 6--s 6--l</div></div>
+                            <div class="row__col row__col--4--xs row__col--6--s row__col--12--l card card--error"><div class="card__body">4--xs 6--s 12--l</div></div>
                         </div>
                     </div>
                 </section>
@@ -424,8 +390,6 @@
                         <span class="text--info">Info</span>
                         <span class="text--warning">Warning</span>
                         <span class="text--error">Error</span>
-                        <span class="text--light">Light</span>
-                        <span class="text--dark">Dark</span>
                     </div>
                 </section>
             </main>

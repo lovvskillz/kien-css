@@ -1,25 +1,24 @@
-// View the color palette online: https://coolors.co/955cff-5b94fc-50f361-50c7f2-f2d750-f25050-e2e2e2-1b1c1e
-$primary-color: #955CFF;
-$secondary-color: #FC765B;
-$success-color: #50F361;
-$info-color: #50C7F2;
-$warning-color: #F8BD3E;
-$error-color: #F25050;
-$light-color: #EDEEF0;
-$dark-color: #1B1C1E;
-$theme-colors: (
-    "primary":    $primary-color,
-    "secondary":  $secondary-color,
-    "success":    $success-color,
-    "info":       $info-color,
-    "warning":    $warning-color,
-    "error":     $error-color,
-    "light":      $light-color,
-    "dark":       $dark-color
-);
-$background-color: #fff;
-$text-color: calcContrast($background-color);
+@use 'sass:color';
 
+// View the color palette online: https://coolors.co/baffea-e5bad8-76db9a-76c0db-dbca76-db7676-edeef0-1b1c1e
+$primary-color: #BAFFEA;
+$secondary-color: #E5BAD8;
+$success-color: #76DB9A;
+$info-color: #76C0DB;
+$warning-color: #DBCA76;
+$error-color: #DB7676;
+$base-color: #1B1C1E;
+$text-color: calc-contrast($base-color);
+$theme-colors: (
+    "primary": $primary-color,
+    "secondary": $secondary-color,
+    "success": $success-color,
+    "info": $info-color,
+    "warning": $warning-color,
+    "error": $error-color,
+    "base": $base-color,
+    "text": $text-color,
+);
 $xsmall-screen: 0;
 $small-screen: 600px;
 $medium-screen: 768px;
@@ -40,46 +39,42 @@ $xlarge-and-down: "only screen and (max-width: #{$xlarge-screen})";
 $xlarge-and-up: "only screen and (min-width: #{$xlarge-screen})";
 
 :root {
-    @each $color-key, $color-value in $theme-colors {
-        --#{$color-key}-color: #{$color-value};
-        @each $shade, $color in makeColorPalette($color-value) {
-            --#{$color-key}-color-step-#{$shade}: #{$color};
-        }
-        --#{$color-key}-color-shade: var(--#{$color-key}-color-step-800);
-        --#{$color-key}-color-dark: #{darken($color-value, 50%)};
-        --#{$color-key}-color-tint: var(--#{$color-key}-color-step-100);
-        --#{$color-key}-color-contrast: #{calcContrast($color-value)};
-    }
-    --background-color: #{$background-color};
-    --text-color: #{$text-color};
-    @each $shade, $color in makeStepColors($text-color, $background-color) {
-        --text-color-step-#{$shade}: #{$color};
-    }
-    --text-color-tint: var(--text-color-step-100);
-    --text-color-contrast: #{calcContrast($text-color)};
-    @each $shade, $color in makeStepColors($background-color, $text-color) {
-        --background-color-step-#{$shade}: #{$color};
-    }
-    --background-color-shade: var(--background-color-step-100);
-    --background-color-contrast: #{calcContrast($background-color)};
-
     --border-radius:  0.4rem;
     --padding-top: 0.75rem;
     --padding-left: 1rem;
     --transition: 0.2s;
-
     --title-font-weight: 700;
-
     --h1-font-size: 2.5rem;
     --h2-font-size: 2rem;
     --h3-font-size: 1.8rem;
     --h4-font-size: 1.6rem;
     --h5-font-size: 1.4rem;
     --h6-font-size: 1.2rem;
+    --shadow-xs: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%);
+    --shadow-s: 0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);
+    --shadow-m: 0 10px 20px rgb(0 0 0 / 19%), 0 6px 6px rgb(0 0 0 / 23%);
+    --shadow-l: 0 14px 28px rgb(0 0 0 / 25%), 0 10px 10px rgb(0 0 0 / 22%);
+    --shadow-xl: 0 19px 38px rgb(0 0 0 / 30%), 0 15px 12px rgb(0 0 0 / 22%);
 
-    --shadow-xs: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    --shadow-s: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    --shadow-m: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-    --shadow-l: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-    --shadow-xl: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    @each $color-key, $color-value in $theme-colors {
+        --#{$color-key}-color: #{$color-value};
+        --#{$color-key}-color-rgb: #{hex-to-rgb-value($color-value)};
+        --#{$color-key}-color-soft: #{color.scale($color-value, $lightness: -50%, $saturation: -35%)};
+        --#{$color-key}-color-dark: #{color.scale($color-value, $lightness: -75%, $saturation: -55%)};
+        --#{$color-key}-color-shade: var(--#{$color-key}-color-step-800);
+        --#{$color-key}-color-bright: var(--#{$color-key}-color-step-100);
+        --#{$color-key}-color-contrast: #{calc-contrast($color-value)};
+
+        @each $shade, $color in make-color-palette($color-value) {
+            --#{$color-key}-color-step-#{$shade}: #{$color};
+        }
+    }
+
+    @each $shade, $color in make-step-colors($text-color, $base-color) {
+        --text-color-step-#{$shade}: #{$color};
+    }
+
+    @each $shade, $color in make-step-colors($base-color, $text-color) {
+        --base-color-step-#{$shade}: #{$color};
+    }
 }

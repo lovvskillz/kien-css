@@ -1,23 +1,25 @@
 body {
-    background-color: var(--background-color);
+    background-color: var(--base-color);
     color: var(--text-color);
     margin: 0;
-}
-
-pre {
-    background-color: var(--background-color-step-50);
-    padding: var(--padding-top) var(--padding-left);
-    border-radius: var(--border-radius);
-    code {
-        color: var(--text-color);
-    }
 }
 
 code {
     color: var(--secondary-color);
 }
 
+pre {
+    background-color: var(--base-color-bright);
+    border-radius: var(--border-radius);
+    padding: var(--padding-top) var(--padding-left);
+
+    code {
+        color: var(--text-color);
+    }
+}
+
 $shadows: xs, s, m, l, xl;
+
 @each $shadow in $shadows {
     .shadow-#{$shadow} {
         box-shadow: var(--shadow-#{$shadow});

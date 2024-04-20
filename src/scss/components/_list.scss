@@ -6,11 +6,13 @@
     --list-padding: var(--list-padding-top) var(--list-padding-right) var(--list-padding-bottom) var(--list-padding-left);
     --list-border-weight: 0.1rem;
     --list-border-style: solid;
-    --list-border-color: var(--background-color-step-50);
+    --list-border-color: var(--base-color-bright);
     --list-border-radius: var(--border-radius);
-    padding: var(--list-padding);
+
     border-radius: var(--list-border-radius);
     list-style-type: none;
+    padding: var(--list-padding);
+
     &__item {
         --list-item-padding-top: var(--padding-top);
         --list-item-padding-bottom: var(--list-item-padding-top);
@@ -18,73 +20,82 @@
         --list-item-padding-right: var(--list-item-padding-left);
         --list-item-padding: var(--list-item-padding-top) var(--list-item-padding-right) var(--list-item-padding-bottom) var(--list-item-padding-left);
         --list-item-text-color: var(--text-color);
-        --list-item-background-color: var(--background-color);
+        --list-item-background-color: var(--base-color);
         --list-item-border-weight: var(--list-border-weight);
         --list-item-border-style: var(--list-border-style);
         --list-item-border-color: var(--list-border-color);
         --list-item-border: var(--list-item-border-weight) var(--list-item-border-style) var(--list-item-border-color);
         --list-item-margin: 0;
         --list-item-transition: var(--transition);
-        width: 100%;
-        padding: var(--list-item-padding);
-        margin-bottom: var(--list-item-margin);
+
         background-color: var(--list-item-background-color);
-        color: var(--list-item-text-color);
-        transition: var(--list-item-transition);
-        display: block;
-        position: relative;
-        box-sizing: border-box;
+        border-bottom: var(--list-item-border);
         border-left: var(--list-item-border);
         border-right: var(--list-item-border);
-        border-bottom: var(--list-item-border);
         border-top: none;
+        box-sizing: border-box;
+        color: var(--list-item-text-color);
+        display: block;
+        margin-bottom: var(--list-item-margin);
+        padding: var(--list-item-padding);
+        position: relative;
+        transition: var(--list-item-transition);
+        width: 100%;
+
         $list-item-selector: &;
-        @each $selector in $list-item-selector {
-            @each $color-key, $color-value in $theme-colors {
-                &--#{$color-key}#{$selector} {
-                    --list-item-background-color: var(--#{$color-key}-color-step-100);
-                    --list-item-text-color: var(--#{$color-key}-color-step-900);
-                    --list-item-border-color: var(--#{$color-key}-color-step-200);
-                    &#{$selector}--active {
-                        --list-item-background-color: var(--#{$color-key}-color);
-                        --list-item-text-color: var(--#{$color-key}-color-contrast);
-                        --list-item-border-color: var(--#{$color-key}-color-step-600);
-                    }
-                }
-            }
-        }
+
         &--action {
             cursor: pointer;
-            text-align: inherit;
             font-family: inherit;
             font-size: inherit;
             line-height: inherit;
+            text-align: inherit;
+
             &:hover {
-                --list-item-background-color: var(--background-color-step-200);
+                --list-item-background-color: var(--base-color-bright);
                 --list-item-text-color: var(--text-color);
-                --list-item-border-color: var(--background-color-step-300);
+                --list-item-border-color: var(--base-color-bright);
+
                 @each $color-key, $color-value in $theme-colors {
                     &#{$list-item-selector}--#{$color-key} {
-                        --list-item-background-color: var(--#{$color-key}-color);
-                        --list-item-text-color: var(--#{$color-key}-color-contrast);
-                        --list-item-border-color: var(--#{$color-key}-color-step-600);
+                        --list-item-background-color: var(--#{$color-key}-color-shade);
+                        --list-item-text-color: var(--#{$color-key}-color-dark);
+                        --list-item-border-color: var(--#{$color-key}-color-shade);
                     }
                 }
             }
         }
+
         &--active {
-            --list-item-background-color: var(--background-color-step-100);
+            --list-item-background-color: var(--base-color-bright);
             --list-item-text-color: var(--text-color);
-            --list-item-border-color: var(--background-color-step-200);
+            --list-item-border-color: var(--base-color-bright);
         }
+
         &:first-child {
             border-top: var(--list-item-border);
             border-top-left-radius: var(--list-border-radius);
             border-top-right-radius: var(--list-border-radius);
         }
+
         &:last-child {
             border-bottom-left-radius: var(--list-border-radius);
             border-bottom-right-radius: var(--list-border-radius);
+        }
+
+        @each $selector in $list-item-selector {
+            @each $color-key, $color-value in $theme-colors {
+                &--#{$color-key}#{$selector} {
+                    --list-item-background-color: var(--#{$color-key}-color);
+                    --list-item-text-color: var(--#{$color-key}-color-dark);
+                    --list-item-border-color: var(--#{$color-key}-color);
+                    &#{$selector}--active {
+                        --list-item-background-color: var(--#{$color-key}-color-shade);
+                        --list-item-text-color: var(--#{$color-key}-color-dark);
+                        --list-item-border-color: var(--#{$color-key}-color-shade);
+                    }
+                }
+            }
         }
     }
 }

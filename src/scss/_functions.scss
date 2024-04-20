@@ -1,53 +1,62 @@
 @use "sass:math";
+@use 'sass:color';
+
 // Code from https://codepen.io/xdesro/pen/WJBwyv
-@function multiply ($fore, $back) {
-  $red: calc(red($back) * red($fore) / 255);
-  $green: calc(green($back) * green($fore) / 255);
-  $blue: calc(blue($back) * blue($fore) / 255);
+@function multiply($fore, $back) {
+  $red: calc(color.red($back) * color.red($fore) / 255);
+  $green: calc(color.green($back) * color.green($fore) / 255);
+  $blue: calc(color.blue($back) * color.blue($fore) / 255);
+
   @return rgb($red, $green, $blue);
 }
 
-@function makeColorPalette($color) {
+@function make-color-palette($color) {
   $light: #fff;
   $dark: multiply($color, $color);
   $palette: (
-    50: mix($light, $color, 88%),
-    100: mix($light, $color, 70%),
-    200: mix($light, $color, 50%),
-    300: mix($light, $color, 30%),
-    400: mix($light, $color, 15%),
-    500: mix($light, $color, 0%),
-    600: mix($dark, $color, 13%),
-    700: mix($dark, $color, 30%),
-    800: mix($dark, $color, 46%),
-    900: mix($dark, $color, 75%),
+    50: color.mix($light, $color, 88%),
+    100: color.mix($light, $color, 70%),
+    200: color.mix($light, $color, 50%),
+    300: color.mix($light, $color, 30%),
+    400: color.mix($light, $color, 15%),
+    500: color.mix($light, $color, 0%),
+    600: color.mix($dark, $color, 13%),
+    700: color.mix($dark, $color, 30%),
+    800: color.mix($dark, $color, 46%),
+    900: color.mix($dark, $color, 75%),
   );
+
   @return $palette;
 }
 
-@function makeStepColors($color1, $color2) {
+@function make-step-colors($color1, $color2) {
   $palette: (
-    50: mix($color2, $color1, 5%),
-    100: mix($color2, $color1, 10%),
-    200: mix($color2, $color1, 20%),
-    300: mix($color2, $color1, 30%),
-    400: mix($color2, $color1, 40%),
-    500: mix($color2, $color1, 50%),
-    600: mix($color2, $color1, 60%),
-    700: mix($color2, $color1, 70%),
-    800: mix($color2, $color1, 80%),
-    900: mix($color2, $color1, 90%),
+    50: color.mix($color2, $color1, 5%),
+    100: color.mix($color2, $color1, 10%),
+    200: color.mix($color2, $color1, 20%),
+    300: color.mix($color2, $color1, 30%),
+    400: color.mix($color2, $color1, 40%),
+    500: color.mix($color2, $color1, 50%),
+    600: color.mix($color2, $color1, 60%),
+    700: color.mix($color2, $color1, 70%),
+    800: color.mix($color2, $color1, 80%),
+    900: color.mix($color2, $color1, 90%),
   );
+
   @return $palette;
 }
 
-@function calcContrast($color) {
-  $contrast: math.round(calc((red($color) * 299 + green($color) * 587 + blue($color) * 114) / 1000));
+@function calc-contrast($color) {
+  $contrast: math.round(calc((color.red($color) * 299 + color.green($color) * 587 + color.blue($color) * 114) / 1000));
+
   @if $contrast > 128 {
     @return black;
-  }
-  @else {
+  } @else {
     @return white;
   }
 
+}
+
+@function hex-to-rgb-value($color) {
+  @return red($color) + ', ' + green($color) + ', ' + blue($color);
 }

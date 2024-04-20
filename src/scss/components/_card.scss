@@ -6,49 +6,67 @@
     --card-margin: var(--card-margin-top) var(--card-margin-right) var(--card-margin-bottom) var(--card-margin-left);
     --card-border-radius: var(--border-radius);
     --card-text-color: var(--text-color);
-    --card-background-color: var(--background-color-step-50);
-    margin: var(--card-margin);
-    background-color: var(--card-background-color);
-    color: var(--card-text-color);
+
     border-radius: var(--card-border-radius);
-    @each $color-key, $color-value in $theme-colors {
-        &--#{$color-key} {
-            --card-background-color: var(--#{$color-key}-color);
-            --card-text-color: var(--#{$color-key}-color-contrast);
-            .card__footer {
-                --card-footer-border-top-color: var(--#{$color-key}-color-step-800);
-            }
-        }
-    }
-    &__title {
-        --card-title-font-weight: var(--title-font-weight);
-        --card-title-font-size: var(--h5-font-size);
-        --card-title-margin-top: 0;
-        --card-title-margin-bottom: var(--card-padding-top);
-        font-size: var(--card-title-font-size);
-        font-weight: var(--card-title-font-weight);
-        margin-top: var(--card-title-margin-top);
-        margin-bottom: var(--card-title-margin-bottom);
-    }
+    color: var(--card-text-color);
+    margin: var(--card-margin);
+
     &__body {
+        --card-body-background-color: var(--base-color-bright);
         --card-body-padding-top: var(--padding-left);
         --card-body-padding-bottom: var(--card-body-padding-top);
         --card-body-padding-left: var(--card-body-padding-top);
         --card-body-padding-right: var(--card-body-padding-top);
         --card-body-padding: var(--card-body-padding-top) var(--card-body-padding-right) var(--card-body-padding-bottom) var(--card-body-padding-left);
+
+        background-color: var(--card-body-background-color);
+        border-top-left-radius: var(--card-border-radius);
+        border-top-right-radius: var(--card-border-radius);
         padding: var(--card-body-padding);
+
+        &:not(:has(~ .card__footer)) {
+            border-bottom-left-radius: var(--card-border-radius);
+            border-bottom-right-radius: var(--card-border-radius);
+        }
     }
+
+    &__title {
+        --card-title-font-weight: var(--title-font-weight);
+        --card-title-font-size: var(--h5-font-size);
+        --card-title-margin-top: 0;
+        --card-title-margin-bottom: var(--card-padding-top);
+
+        font-size: var(--card-title-font-size);
+        font-weight: var(--card-title-font-weight);
+        margin-bottom: var(--card-title-margin-bottom);
+        margin-top: var(--card-title-margin-top);
+    }
+
     &__footer {
+        --card-footer-background-color: var(--base-color-soft);
         --card-footer-padding-top: calc(var(--padding-left) / 2);
         --card-footer-padding-bottom: var(--card-footer-padding-top);
         --card-footer-padding-left: var(--padding-left);
         --card-footer-padding-right: var(--card-footer-padding-left);
         --card-footer-padding: var(--card-footer-padding-top) var(--card-footer-padding-right) var(--card-footer-padding-bottom) var(--card-footer-padding-left);
-        --card-footer-border-top-weight: 0.2rem;
-        --card-footer-border-top-style: solid;
-        --card-footer-border-top-color: var(--background-color-shade);
-        --card-footer-border-top: var(--card-footer-border-top-weight) var(--card-footer-border-top-style) var(--card-footer-border-top-color);
-        padding: var(--card-footer-padding);
+
         border-top: var(--card-footer-border-top);
+        border-bottom-left-radius: var(--card-border-radius);
+        border-bottom-right-radius: var(--card-border-radius);
+        background-color: var(--card-footer-background-color);
+        padding: var(--card-footer-padding);
+    }
+
+    @each $color-key, $color-value in $theme-colors {
+        &--#{$color-key} {
+            --card-text-color: var(--#{$color-key}-color-contrast);
+
+            .card__body {
+                --card-body-background-color: var(--#{$color-key}-color);
+            }
+            .card__footer {
+                --card-footer-background-color: var(--#{$color-key}-color-dark);
+            }
+        }
     }
 }

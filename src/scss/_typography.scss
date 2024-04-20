@@ -3,12 +3,14 @@ a {
 }
 
 html{
-    line-height: 1.5;
-    font-family: "Montserrat";
-    font-weight: normal;
     color: var(--text-color);
+    font-family: Montserrat, sans-serif;
+    font-weight: normal;
+    line-height: 1.5;
 }
+
 $headings: h1, h2, h3, h4, h5, h6;
+
 @each $heading in $headings {
     #{$heading},.#{$heading} {
         font-size: var(--#{$heading}-font-size);

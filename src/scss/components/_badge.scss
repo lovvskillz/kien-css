@@ -4,23 +4,24 @@
     --badge-padding-left: 0.5rem;
     --badge-padding-right: var(--alert-padding-left);
     --badge-border-radius: var(--border-radius);
-    --badge-text-color: var(--background-color-step-900);
-    --badge-background-color: var(--background-color-step-50);
+    --badge-text-color: var(--base-color-step-900);
+    --badge-background-color: var(--base-color-bright);
     --badge-margin: 1rem;
     --badge-font-weight: bold;
     --badge-font-size: 0.7rem;
-    border-radius: var(--badge-border-radius);
-    padding: var(--badge-padding-top) var(--badge-padding-left);
-    margin-bottom: var(--badge-margin);
-    font-weight: var(--badge-font-weight);
+
     background-color: var(--badge-background-color);
+    border-radius: var(--badge-border-radius);
     color: var(--badge-text-color);
-    font-weight: var(--badge-font-weight);
     font-size: var(--badge-font-size);
+    font-weight: var(--badge-font-weight);
+    margin-bottom: var(--badge-margin);
+    padding: var(--badge-padding-top) var(--badge-padding-left);
+
     @each $color-key, $color-value in $theme-colors {
         &--#{$color-key} {
-            --badge-background-color: var(--#{$color-key}-color-step-50);
-            --badge-text-color: var(--#{$color-key}-color-step-900);
+            --badge-background-color: var(--#{$color-key}-color-bright);
+            --badge-text-color: var(--#{$color-key}-color-dark);
         }
     }
 }

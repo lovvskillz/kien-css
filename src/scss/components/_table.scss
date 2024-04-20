@@ -6,38 +6,45 @@
     --table-padding: var(--table-padding-top) var(--table-padding-right) var(--table-padding-bottom) var(--table-padding-left);
     --table-border-weight: 0.1rem;
     --table-border-style: solid;
-    --table-border-color: var(--background-color-step-50);
+    --table-border-color: var(--base-color-bright);
     --table-border: var(--table-border-weight) var(--table-border-style) var(--table-border-color);
     --table-border-radius: var(--border-radius);
     --table-text-align: left;
-    padding: var(--table-padding);
-    width: 100%;
-    display: table;
+
     border-collapse: separate;
     border-spacing: 0;
+    display: table;
+    padding: var(--table-padding);
+    width: 100%;
+
     thead {
-        background-color: var(--background-color-step-50);
+        background-color: var(--base-color-bright);
     }
+
     thead,tbody {
         &:first-child {
             tr:first-child {
                 th,td {
                     border-top: var(--table-border);
+
                     &:first-child {
                         border-top-left-radius: var(--table-border-radius);
                     }
+
                     &:last-child {
                         border-top-right-radius: var(--table-border-radius);
                     }
                 }
             }
         }
+
         &:last-child {
             tr:last-child {
                 th,td {
                     &:first-child {
                         border-bottom-left-radius: var(--table-border-radius);
                     }
+
                     &:last-child {
                         border-bottom-right-radius: var(--table-border-radius);
                     }
@@ -45,6 +52,7 @@
             }
         }
     }
+
     tr {
         th,td {
             --table-cell-padding-top: var(--padding-top);
@@ -52,21 +60,25 @@
             --table-cell-padding-left: var(--table-cell-padding-top);
             --table-cell-padding-right: var(--table-cell-padding-top);
             --table-cell-padding: var(--table-cell-padding-top) var(--table-cell-padding-right) var(--table-cell-padding-bottom) var(--table-cell-padding-left);
-            padding: var(--table-cell-padding);
-            text-align: var(--table-text-align);
+
             border: none;
             border-bottom: var(--table-border);
+            padding: var(--table-cell-padding);
+            text-align: var(--table-text-align);
+
             &:first-child {
                 border-left: var(--table-border);
             }
+
             &:last-child {
                 border-right: var(--table-border);
             }
         }
     }
+
     &--striped {
         tr:nth-child(even) {
-            background-color: var(--background-color-step-50);
+            background-color: var(--base-color-bright);
         }
     }
 }
