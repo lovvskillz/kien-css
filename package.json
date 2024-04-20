@@ -1,7 +1,7 @@
 {
-  "name": "prostoycss",
+  "name": "kiencss",
   "version": "0.1.0",
-  "description": "ProstoyCSS is a simple CSS Framework",
+  "description": "KienCSS is a simple CSS Framework",
   "main": "index.js",
   "directories": {
     "doc": "docs"
@@ -28,7 +28,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/lovvskillz/prostoy-css"
+    "url": "https://github.com/lovvskillz/kien-css"
   },
   "author": "Vadim Zifra",
   "license": "MIT License"

@@ -1,8 +1,8 @@
-# ProstoyCSS
+# KienCSS
 
-![ProstoyCSS Logo](docs/static/logo.png "ProstoyCSS Logo")
+![KienCSS Logo](docs/static/logo.png "KienCSS Logo")
 
-ProstoyCSS is a simple CSS Framework
+KienCSS is a simple CSS Framework
 
 ## Development
 Install [Node.js](https://nodejs.org/en/download)
